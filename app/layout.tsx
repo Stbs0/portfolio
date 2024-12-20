@@ -42,10 +42,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <head>
         <script
-          type="application/ld+json"
+          type='application/ld+json'
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "http://schema.org",
@@ -62,8 +62,7 @@ export default function RootLayout({
         />
         <script
           async
-          src={`https://www.googletagmanager.com/gtag/js?id=G-${process.env.NEXT_PRIVATE_GTID}`}
-        ></script>
+          src={`https://www.googletagmanager.com/gtag/js?id=G-${process.env.NEXT_PRIVATE_GTID}`}></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -77,11 +76,11 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.className} bg-[#111] overflow-y-scroll overflow-x-hidden`}
-      >
+        className={`${inter.className} overflow-y-scroll overflow-x-hidden relative bg-transparent`}>
         <SpeedInsights />
         <Analytics />
         <StarsCanvas />
+        <div className="absolute inset-0 bg-[url('/LooperGroup2.png')] bg-no-repeat bg-cover  z-[-1] " />
         <Navbar />
         {children}
       </body>
