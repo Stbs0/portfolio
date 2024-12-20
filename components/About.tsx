@@ -1,7 +1,8 @@
+import { Careers } from "@/app/[career]/page";
 import { ABOUT_ME } from "@/constant";
 import React from "react";
 
-const About: React.FC<{}> = () => {
+const About = ({ career }: { career: Careers }) => {
   return (
     <section
       id='about'
@@ -13,7 +14,7 @@ const About: React.FC<{}> = () => {
           EXPLORE NOW
         </p>
         <div className='space-y-4 text-center'>
-          {ABOUT_ME.paragraphs.map((paragraph, index) => (
+          {ABOUT_ME[career].map((paragraph, index) => (
             <p
               className='text-gray-300  '
               key={index}>
