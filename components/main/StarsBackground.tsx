@@ -45,9 +45,9 @@ const StarsCanvas: React.FC<{}> = () => {
   return (
     <div
       className={`w-full h-auto fixed inset-0 ${
-        isDeveloper(career as string) ? "bg-black " : "bg-[#fdfdfd]"
+        isDeveloper(career as string) ? "bg-black " : "bg-[#fdfdfd] "
       }   bg-[url('/LooperGroup2.png')] 
-            bg-no-repeat    z-[-1] 
+            bg-no-repeat   z-[-1] 
       } z-[-2] `}>
       <Canvas camera={{ position: [0, 0, 1] }}>
         <Suspense fallback={null}>

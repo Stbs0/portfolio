@@ -8,7 +8,10 @@ import { isDeveloper } from "@/lib/utils";
 const Footer = ({ career }: { career: string }) => {
   return (
     <div className=' container mx-auto 2xl pt-[50px] pb-8 '>
-      <div className='pb-10 justify-center flex '>
+      <div
+        className={`${
+          isDeveloper(career) ? "" : "invert"
+        } pb-10 justify-center flex  `}>
         {Social_Icons.map((social, index) => {
           return (
             <a
@@ -31,7 +34,7 @@ const Footer = ({ career }: { career: string }) => {
       </div>
       <p
         className={`${
-          isDeveloper(career) ? "text-gray-300" : "text-gray-700"
+          isDeveloper(career) ? "text-gray-300" : "text-gray-700 "
         }  text-center text-sm`}>
         Created with ❤️ using Next.js
       </p>

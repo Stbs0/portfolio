@@ -35,7 +35,7 @@ const Navbar = () => {
             className={` z-[1] bg-transparent  padding-10 cursor-pointer   rounded-xl    py-2 px-5 ${
               isDeveloper(career as string)
                 ? "text-white hover:bg-[#2E2E2E]"
-                : "hover:bg-[#e8e8e8]"
+                : "hover:bg-[#2E2E2E] hover:text-white"
             } `}>
             Contact
           </div>
