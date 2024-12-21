@@ -3,13 +3,10 @@ import Banner from "@/components/Banner";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Projects from "@/components/Projects";
-import { notFound } from "next/navigation";
 
-export enum Careers {
-  developer = "developer",
-  pharmacist = "pharmacist",
-}
-export default function Career({ params }: { params: { career: Careers } }) {
+export type Careers = "developer" | "pharmacist";
+
+export default function Career({ params }: { params:  { career: Careers } }) {
   const career = params?.career;
 
   console.log(career);

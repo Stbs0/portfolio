@@ -1,6 +1,5 @@
 import { PROJECTS } from "@/constant";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 
 const Project = ({
@@ -39,7 +38,7 @@ const Project = ({
   );
 };
 
-const Projects: React.FC<{}> = () => {
+const Projects = () => {
   return (
     <section id='projects'>
       <h2 className='text-white font-semibold text-center text-6xl pt-[35px]'>

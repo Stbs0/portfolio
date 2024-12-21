@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import Layout from "@/components/Layout";
+import { ReactNode } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -38,9 +39,9 @@ export const metadata: Metadata = {
 };
 export default function RootLayout({
   children,
-  params,
+ 
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
   params: { career: string };
 }) {
   return (

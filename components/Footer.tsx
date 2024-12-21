@@ -1,8 +1,7 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import { Social_Icons } from "@/constant";
 import Image from "next/image";
-import Link from "next/link";
 import { isDeveloper } from "@/lib/utils";
 
 const Footer = ({ career }: { career: string }) => {

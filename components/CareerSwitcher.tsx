@@ -12,21 +12,37 @@ export default function PageSwitcher({ career }: { career: Careers }) {
 
   const handleToggle = (checked: boolean) => {
     setIsDeveloper(checked);
-    router.push(checked ? "/developer" : "/pharmacist");
+    router.push(checked ? "/developer" : "/pharmacist", { scroll: false });
   };
 
   return (
-    <div className='flex items-center justify-center gap-4 p-4  rounded-md '>
-      <span className='text-sm font-medium text-gray-600'>Pharmacist</span>
-      <Switch
-        size='lg'
-        isSelected={isDeveloper}
-        endContent={<Pill />}
-        startContent={<Binary />}
-        onChange={(e) => handleToggle(e.target.checked)}
-        color='default'
-      />
-      <span className='text-sm font-medium text-gray-600'>Developer</span>
+    <div className='flex flex-col pt-4'>
+      <p className={`${isDeveloper ? "text-gray-300" : "text-gray-700"}`}>
+        {" "}
+        click on the switch tp view the other careers
+      </p>
+      <div className='flex items-center justify-center gap-4 p-4 pt-1  rounded-md '>
+        <span
+          className={`${
+            isDeveloper ? "text-gray-300" : "text-gray-700"
+          } text-sm font-medium `}>
+          Developer
+        </span>
+        <Switch
+          size='lg'
+          isSelected={isDeveloper}
+          endContent={<Pill />}
+          startContent={<Binary />}
+          onChange={(e) => handleToggle(e.target.checked)}
+          color='default'
+        />
+        <span
+          className={`${
+            isDeveloper ? "text-gray-300" : "text-gray-700"
+          } text-sm font-medium text-gray-600`}>
+          Pharmacist
+        </span>
+      </div>
     </div>
   );
 }

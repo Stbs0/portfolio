@@ -1,15 +1,17 @@
+import { ReactNode } from "react";
 import Navbar from "./Navbar";
 import StarsCanvas from "./main/StarsBackground";
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+const Layout = ({
+  children,
+ 
+}: {
+  children: ReactNode;
+}) => {
   return (
     <>
       <StarsCanvas />
-      {/* <div
-          className={`absolute right-0  h-full  bg-[url('/LooperGroup2.png')] ${
-            isDeveloper(params.career) ? "" : "invert"
-          }  bg-no-repeat    z-[-1] `}
-        /> */}
+      
       <Navbar />
       {children}
     </>
