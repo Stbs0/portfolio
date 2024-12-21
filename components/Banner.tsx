@@ -8,6 +8,9 @@ import { Switch } from "@nextui-org/switch";
 import { BANNER } from "@/constant";
 import { Careers } from "@/app/[career]/page";
 import { redirect } from "next/navigation";
+import Link from "next/link";
+import PageSwitcher from "./CareerSwitcher";
+import { isDeveloper } from "@/lib/utils";
 const Banner = ({ career }: { career: Careers }) => {
   return (
     <section className='flex flex-row items-center justify-center px-20 mt-[100px] z-[20] '>
@@ -23,45 +26,45 @@ const Banner = ({ career }: { career: Careers }) => {
           />
         </div>
 
-        <h1 className='flex flex-col gap-6 mt-10 cursor-pointer animate-bounce tracking-tighter text-7xl font-semibold text-white max-w-[600px] w-auto h-auto '>
+        <h1
+          className={`flex flex-col ${
+            isDeveloper(career) ? "text-white" : ""
+          }  gap-6 mt-10 cursor-pointer animate-bounce tracking-tighter text-7xl font-semibold  max-w-[600px] w-auto h-auto `}>
           Mohammed Mahmoud
         </h1>
         <div className='flex justify-center'>
-          <p className='text-2xl font-medium tracking-tighter  text-gray-300 max-w-[600px]'>
+          <p
+            className={`text-2xl font-medium tracking-tighter ${
+              isDeveloper(career) ? "text-gray-300" : "text-gray-700"
+            }   max-w-[600px]`}>
             I do Code &{" "}
             <span className='text-transparent font-semibold  bg-clip-text bg-gradient-to-r from-purple-500 to-orange-400'>
               Chill
             </span>
           </p>
-          <Image 
+          <Image
             src='/popcorn.gif'
             height={50}
             width={50}
             alt='popcorn gif'
           />
         </div>
-        <div className='flex justify-center'>
-          <Switch
-            defaultSelected
-            color='primary'
-            endContent={<Pill />}
-            size='lg'
-            checked={career === "developer"}
-            onValueChange={(e) => {
-              redirect(
-                `/${career === "developer" ? "pharmacist" : "developer"}`,
-              );
-            }}
-            startContent={<Binary />}></Switch>
-        </div>
 
-        <p className='text-md text-gray-200 my-5 max-w-[600px]'>
+        <PageSwitcher career={career} />
+        <p
+          className={`text-md  my-5 max-w-[600px] ${
+            isDeveloper(career) ? "text-gray-200" : "text-gray-800"
+          } `}>
           {BANNER[career]}
         </p>
         <div className='text-md flex justify-center'>
           <button
             onClick={() => window.open("mailto:mohammedjrt@gmail.com")}
-            className=' z-[1]     padding-20  hover:bg-white rounded-3xl  text-white font-semibold hover:text-black py-3 px-10  border-[0.1px] border-white hover:border-transparent '>
+            className={` z-[1]     padding-20  ${
+              isDeveloper(career)
+                ? "text-white hover:bg-white border-white hover:text-black"
+                : "hover:bg-black hover:text-white border-black "
+            }  rounded-3xl   font-semibold  py-3 px-10  border-[0.1px]  hover:border-transparent `}>
             Contact Me
           </button>
         </div>

@@ -53,7 +53,7 @@ export const PROJECTS = [
   },
   {
     title: "Space Tourism",
-    url: "space-tourism-one-umber.vercel.app",
+    url: "https://space-tourism-one-umber.vercel.app",
     image: "/space_toursm_logo.svg",
     description: "A website about space tourism",
   },

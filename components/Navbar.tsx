@@ -1,37 +1,47 @@
 "use client";
 
+import { isDeveloper } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 import React from "react";
 
-const Navbar: React.FC<{}> = () => {
+const Navbar = () => {
+  const { career } = useParams();
   return (
-    <div className="w-full h-[65px] bg-['#111'] fixed backdrop-blur-sm z-50 px-10">
-      <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[10px]">
-        <a
-          title="ibrahim logo"
-          href="/"
-          className="h-auto w-auto flex flex-row items-center"
-        >
+    <header
+      className={`w-full h-[65px] ${
+        isDeveloper(career as string) ? "text-white bg-['#111']" : ""
+      }  fixed backdrop-blur-sm z-50 px-10`}>
+      <div className='w-full h-full flex flex-row items-center justify-between m-auto px-[10px]'>
+        <Link
+          title='Mohammed Mahmoud logo'
+          href='/'
+          className='h-auto w-auto flex flex-row items-center'>
           <Image
-            src="/Logo.svg"
-            alt="Ibrahim Memon - Developer"
-            width={100}
+            src='/signature.png'
+            alt='Mohammed Mahmoud - Developer / Pharmacist'
+            width={60}
             height={100}
-            sizes="100vw"
-            className="w-full h-auto"
+            className={`
+            ${isDeveloper(career as string) ? " invert" : "  "}
+            `}
           />
-        </a>
+        </Link>
 
-        <div className="flex flex-row gap-5">
+        <div className='flex flex-row gap-5'>
           <div
-            onClick={() => window.open("mailto:ibrahimmemon930@gmail.com")}
-            className=" z-[1] bg-transparent  padding-10 cursor-pointer bg-black hover:bg-[#2E2E2E] rounded-xl  text-white  py-2 px-5"
-          >
+            onClick={() => window.open("mailto:mohammedjrt@gmail.com")}
+            className={` z-[1] bg-transparent  padding-10 cursor-pointer   rounded-xl    py-2 px-5 ${
+              isDeveloper(career as string)
+                ? "text-white hover:bg-[#2E2E2E]"
+                : "hover:bg-[#e8e8e8]"
+            } `}>
             Contact
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

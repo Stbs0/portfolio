@@ -10,22 +10,14 @@ export enum Careers {
   pharmacist = "pharmacist",
 }
 export default function Career({ params }: { params: { career: Careers } }) {
-  const { career } = params;
+  const career = params?.career;
 
-  if (career !== "developer" && career !== "pharmacist") {
-    return notFound();
-  }
-
+  console.log(career);
   return (
-    <main className='h-full w-full '>
-      <div className='flex flex-col gap-20'>
-        <Banner career={career} />
-        <About career={career} />
-
-        {career === "pharmacist" ? <Experience /> : <Projects />}
-
-        <Footer />
-      </div>
-    </main>
+    <>
+      <Banner career={career} />
+      <About career={career} />
+      {career === "pharmacist" ? <Experience career={career} /> : <Projects />} <Footer career={career} />
+    </>
   );
 }
