@@ -30,7 +30,7 @@ const StarBackground = (props: any) => {
         <PointMaterial
           transparent
           color={career === "developer" ? "#fff" : "#000000"}
-          size={0.002}
+          size={0.005}
           sizeAttenuation={true}
           dethWrite={false}
         />
@@ -46,9 +46,8 @@ const StarsCanvas: React.FC<{}> = () => {
     <div
       className={`w-full h-auto fixed inset-0 ${
         isDeveloper(career as string) ? "bg-black " : "bg-[#fdfdfd] "
-      }   bg-[url('/LooperGroup2.png')] 
-            bg-no-repeat   z-[-1] 
-      } z-[-2] `}>
+      }   bg-[url('/LooperGroup2.png')] bg-no-repeat   z-[-1]
+       `}>
       <Canvas camera={{ position: [0, 0, 1] }}>
         <Suspense fallback={null}>
           <StarBackground />

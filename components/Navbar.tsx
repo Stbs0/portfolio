@@ -8,10 +8,16 @@ import React from "react";
 
 const Navbar = () => {
   const { career } = useParams();
+
+  const subject = isDeveloper(career as string) ? "Developer" : "Pharmacist";
+  const body = "I would like to get in touch with you.";
+
   return (
     <header
-      className={`w-full h-[65px] ${
-        isDeveloper(career as string) ? "text-white bg-['#111']" : ""
+      className={`w-full h-[65px]  ${
+        isDeveloper(career as string)
+          ? "text-white bg-['#111'] *:selection:text-black *:selection:bg-white/80"
+          : "*:selection:text-white *:selection:bg-black/80"
       }  fixed backdrop-blur-sm z-50 px-10`}>
       <div className='w-full h-full flex flex-row items-center justify-between m-auto px-[10px]'>
         <Link
@@ -31,7 +37,7 @@ const Navbar = () => {
 
         <div className='flex flex-row gap-5'>
           <div
-            onClick={() => window.open("mailto:mohammedjrt@gmail.com")}
+            onClick={() => window.open(`mailto:mohammedjrt@gmail.com?subject=${subject}&body=${body}`)}
             className={` z-[1] bg-transparent  padding-10 cursor-pointer   rounded-xl    py-2 px-5 ${
               isDeveloper(career as string)
                 ? "text-white hover:bg-[#2E2E2E]"

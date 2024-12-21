@@ -1,14 +1,10 @@
 "use client";
-import { Pill } from "lucide-react";
-import { Binary } from "lucide-react";
 
 import React from "react";
 import Image from "next/image";
-import { Switch } from "@nextui-org/switch";
 import { BANNER } from "@/constant";
 import { Careers } from "@/app/[career]/page";
-import { redirect } from "next/navigation";
-import Link from "next/link";
+
 import PageSwitcher from "./CareerSwitcher";
 import { isDeveloper } from "@/lib/utils";
 const Banner = ({ career }: { career: Careers }) => {

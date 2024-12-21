@@ -33,7 +33,9 @@ export const ABOUT_ME = {
 
     "I'm actively seeking opportunities to bring my skills and creativity to a professional environment where I can contribute to impactful web solutions. Let's build something amazing together!",
   ],
-  pharmacist: [""],
+  pharmacist: [
+    "Highly disciplined and enthusiastic individual with a wealth of diverse experiences. Meticulous and precise in every assigned task. Thrives under pressure and remains committed and responsible in crisis situations or high-stress environments. Strong interpersonal skills enable effective relationship building and communication. Fast learner with knowledge in dispensing protocols, inventory management, and regulatory restrictions. Fluent in Arabic and excellent in English, possessing strong language skills for effective communication with diverse individuals.",
+  ],
 };
 
 export const PROJECTS = [
@@ -72,4 +74,53 @@ export const SKILLS = [
   "MongoDB",
   "Git",
   "GitHub",
+];
+
+export const EXPERIENCES = [
+  {
+    job: "Pharmacy Intern",
+    company: "Dr. Soliman Fakeeh Hospital",
+    location: "Jeddah, Saudi Arabia",
+    startDate: "Oct. 2024",
+    endDate: "Nov. 2024",
+    responsibility: [
+      "Prepared packaging and labels for prescriptions, verifying accuracy of dosage, side effects, interactions, and refill instructions.",
+      "Used pharmacy software to enter prescription and insurance information.",
+      "Counseled patients on new medications and OTC products.",
+      "Perform numerous Extemporaneous compounding.",
+      "Performed technical processes required to dispense medications to patients.",
+      "Reconstituted numerous I.V medicine in the I.V room.",
+    ],
+    img: "DR_Soliman.svg",
+  },
+
+  {
+    job: "Pharmacy Intern",
+    company: "Dr. Samir Abbas Hospital",
+    location: "Jeddah, Saudi Arabia",
+    startDate: "Sep. 2024",
+    endDate: "Oct. 2024",
+    responsibility: [
+      "Read and understood hospital's pharmacy department policies and procedures.",
+      "Experienced in documenting and managing narcotic and controlled medications through the Sehhaty and Raqeeb platforms.",
+      "Educated patients on possible drug interactions, potential side effects, and optimal methods of administration.",
+    ],
+    img: "/DR_Samir.jpg",
+  },
+
+  {
+    job: "Pharmacist",
+    company: "AlFouaad Specialized Hospital",
+    location: "Khartoum, Sudan",
+    startDate: "Jul. 2022",
+    endDate: "April 2023",
+    responsibility: [
+      "Assisted in the processing of insurance claims and coordinated with healthcare providers to resolve any coverage issues, ensuring timely medication delivery to patients",
+      "Managed inventory levels and ordered medications and supplies as needed, optimizing stock levels and reducing waste",
+      "Collaborated with healthcare providers to review and optimize medication therapy plans for patients with complex medical conditions",
+      "Counseled patients on medication usage, potential side effects, and drug interactions to promote safe and effective treatment outcomes",
+      "Verified safety and accuracy of physician orders.",
+    ],
+    img: "/ALfoaad.png",
+  },
 ];
