@@ -3,9 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import StarsCanvas from "@/components/main/StarsBackground";
-import Navbar from "@/components/Navbar";
-import { isDeveloper } from "@/lib/utils";
+
+import Layout from "@/components/Layout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -65,17 +64,10 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.className} overflow-y-scroll overflow-x-hidden relative bg-transparent`}>
+        className={`${inter.className} overflow-y-scroll overflow-x-hidden relative bg-transparent   `}>
         <SpeedInsights />
         <Analytics />
-        <StarsCanvas />
-        <div
-          className={`absolute right-0  h-full  bg-[url('/LooperGroup2.png')] ${
-            isDeveloper(params.career) ? "" : "invert"
-          }  bg-no-repeat    z-[-1] `}
-        />
-        <Navbar />
-        {children}
+        <Layout>{children}</Layout>
       </body>
     </html>
   );

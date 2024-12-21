@@ -1,3 +1,4 @@
+import { isDeveloper } from "@/lib/utils";
 import { notFound } from "next/navigation";
 import React from "react";
 
@@ -14,12 +15,13 @@ const layout = ({
     return notFound();
   }
   return (
-    <main className='h-full w-full px-4 '>
-      <div className='flex flex-col gap-20'>
-        {children}
-
-       
-      </div>
+    <main
+      className={`h-full w-full px-4 ${
+        isDeveloper(career)
+          ? "*:selection:text-black *:selection:bg-white/80 "
+          : "*:selection:text-white *:selection:bg-black/80"
+      } `}>
+      <div className='flex flex-col gap-20'>{children}</div>
     </main>
   );
 };
