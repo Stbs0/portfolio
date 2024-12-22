@@ -124,3 +124,25 @@ export const EXPERIENCES = [
     img: "/ALfoaad.png",
   },
 ];
+
+export const SEO_KEYWORDS = {
+  developer: [
+    "full-stack developer",
+    "React",
+    "TypeScript",
+    "Node.js",
+    "Express",
+    "web applications",
+    "user interfaces",
+    "scalable solutions",
+  ],
+  pharmacist: [
+    "pharmacist",
+    "medication management",
+    "patient counseling",
+    "healthcare",
+    "KSA",
+    "drug therapy management",
+    "patient outcomes",
+  ],
+};

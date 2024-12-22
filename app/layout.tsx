@@ -10,36 +10,26 @@ import { ReactNode } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  // metadataBase: new URL("https://ibiimemon.com/"),
-  title: "Mohammed Mahmoud - SWE | IXD | UX - Developer Portfolio",
-  description:
-    "Developer Portfolio of Frontend & Mobile App Developer from Pakistan with 3+ years of expertise. Senior Software Engineer. Specializing mobile apps, UX, and JavaScript technologies.",
-  keywords: [
-    "Developer",
-    "Portfolio",
-    "Developer Portflio",
-    "Mohammed Mahmoud",
-    "Ibrahim",
-    "IbiiMemon",
-    "IbrahimMemon",
-    "Ibrahim_Memon",
-    "Next.js",
-    "ReactNative",
-    "Android",
-  ],
-  openGraph: {
-    title: "Mohammed Mahmoud - SWE | IXD | UX",
-    description:
-      "Frontend & Mobile App Developer from Pakistan with 3+ years of expertise. Senior Software Engineer. Specializing mobile apps, UX, and JavaScript technologies.",
-    images: "/OpenGraph.jpg",
+  metadataBase: new URL(
+    "https://portfolio-stbs0s-projects.vercel.app/developer",
+  ),
+  title: {
+    default: "Mohammed Mahmoud (stbs) - Developer Portfolio",
+    template: "Mohammed Mahmoud (stbs) - %s Portfolio",
   },
+
+  // openGraph: {
+  //   title: "Mohammed Mahmoud - SWE | IXD | UX",
+  //   description:
+  //     "Frontend & Mobile App Developer from Pakistan with 3+ years of expertise. Senior Software Engineer. Specializing mobile apps, UX, and JavaScript technologies.",
+  //   // images: "/OpenGraph.jpg",
+  // },
   // alternates: {
   //   canonical: "https://ibiimemon.com/",
   // },
 };
 export default function RootLayout({
   children,
- 
 }: {
   children: ReactNode;
   params: { career: string };
