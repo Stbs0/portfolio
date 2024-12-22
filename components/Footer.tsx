@@ -9,7 +9,7 @@ const Footer = ({ career }: { career: string }) => {
       <div
         className={`${
           isDeveloper(career) ? "" : "invert"
-        } pb-10 justify-center flex  `}>
+        } pb-10 justify-center flex gap-10 `}>
         {Social_Icons.map((social, index) => {
           return (
             <a
@@ -17,14 +17,14 @@ const Footer = ({ career }: { career: string }) => {
               rel='noopener noreferrer'
               target='_blank'
               key={index}
-              className='z-[1]'>
+              >
               <Image
                 src={social.image}
-                height={30}
-                width={30}
+                height={40}
+                width={40}
                 alt={social.alt}
-                sizes='100vw'
-                className='mx-5 h-auto '
+                
+                className='h-auto '
               />
             </a>
           );

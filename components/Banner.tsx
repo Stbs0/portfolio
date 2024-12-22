@@ -40,10 +40,12 @@ const Banner = ({ career }: { career: Careers }) => {
             </span>
           </p>
           <Image
-            src='/popcorn.gif'
+            src='/others/popcorn.gif'
             height={50}
             width={50}
             alt='popcorn gif'
+            className="h-auto"
+            unoptimized
           />
         </div>
 

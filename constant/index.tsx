@@ -60,7 +60,7 @@ export const PROJECTS = [
     description: "A website about space tourism",
   },
   {
-    title: "Space Tourism",
+    title: "PokeCards",
     url: "https://memory-card-orcin-two.vercel.app/",
     image: "/projects/pokeball.png",
     description: "a memory card game where you have to match the cards",

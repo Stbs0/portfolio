@@ -25,24 +25,27 @@ const Navbar = () => {
           href='/'
           className='h-auto w-auto flex flex-row items-center'>
           <Image
-            src='/signature.png'
+            src='/others/signature.png'
             alt='Mohammed Mahmoud - Developer / Pharmacist'
             width={60}
-            height={100}
+            height={60}
+            property='logo'
             className={`
-            ${isDeveloper(career as string) ? " invert" : "  "}
+            ${isDeveloper(career as string) ? " invert" : ""} w-auto
             `}
           />
         </Link>
 
         <div className='flex py-2 flex-row gap-5'>
+          {career === "pharmacist" && (
             <a
               href='/pdf/cv-pharmacist.pdf'
               download={"Mohammed Mahmoud - Pharmacist CV.pdf"}>
-          <button className="animate-pulse bg-blue-400 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg">
-              Download CV
-          </button>
+              <button className='animate-pulse bg-blue-400 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg'>
+                Download CV
+              </button>
             </a>
+          )}
           <button
             onClick={() =>
               window.open(
