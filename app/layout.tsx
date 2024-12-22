@@ -29,14 +29,15 @@ const poppings = localFont({
   variable: "--font-poppins",
 });
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    "https://portfolio-stbs0s-projects.vercel.app/developer",
-  ),
+  metadataBase: new URL("http://localhost:3000"),
   title: {
     default: "Mohammed Mahmoud (stbs) - Developer Portfolio",
     template: "Mohammed Mahmoud (stbs) - %s Portfolio",
   },
-
+  icons: {
+    icon: "/favicon.ico", 
+  
+  },
   // openGraph: {
   //   title: "Mohammed Mahmoud - SWE | IXD | UX",
   //   description:
