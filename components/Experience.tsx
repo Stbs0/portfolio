@@ -25,16 +25,16 @@ const Job = ({
       <div className='flex md:flex-row  gap-4 pt-5'>
         <Image
           src={img}
-          height={50}
+          height={60}
           width={60}
-          className='h-auto '
+          className=' w-max-[60px] '
           alt={"Mohammed Mahmoud - Pharmacy Inter"}
         />
         <div className='flex  items-center *:text-left flex-col '>
-          <p className={`text-black-700  `}>
+          <p className={`text-black  `}>
             <span className='font-semibold'>{company} </span>/ {job}
           </p>
-          <p className='text-black-500 md:pt-0 pt-3 w-full '>
+          <p className='text-black md:pt-0 pt-3 w-full '>
             {startDate} - {endDate} / {location}
           </p>
         </div>
@@ -42,7 +42,7 @@ const Job = ({
       <ol className='list-disc dark:text-black-300 pl-20'>
         {responsibility.map((responsibility, index) => (
           <li
-            className='text-black-500 pt-5'
+            className='text-black pt-5'
             key={index}>
             {responsibility}
           </li>
