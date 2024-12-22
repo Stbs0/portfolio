@@ -36,7 +36,7 @@ const Navbar = () => {
         </Link>
 
         <div className='flex flex-row gap-5'>
-          <div
+          <button
             onClick={() => window.open(`mailto:mohammedjrt@gmail.com?subject=${subject}&body=${body}`)}
             className={` z-[1] bg-transparent  padding-10 cursor-pointer   rounded-xl    py-2 px-5 ${
               isDeveloper(career as string)
@@ -44,7 +44,7 @@ const Navbar = () => {
                 : "hover:bg-[#2E2E2E] hover:text-white"
             } `}>
             Contact
-          </div>
+          </button>
         </div>
       </div>
     </header>

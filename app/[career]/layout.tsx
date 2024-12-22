@@ -11,10 +11,12 @@ const layout = ({
   params: { career: string };
 }) => {
   const { career } = params;
+const validCareers = ["developer", "pharmacist"];
 
-  if (career !== "developer" && career !== "pharmacist") {
+  if (!validCareers.includes(career)) {
     return notFound();
   }
+
   return (
     <main
       className={`h-full w-full px-4    ${
