@@ -1,14 +1,33 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import localFont from "next/font/local";
 
 import Layout from "@/components/Layout";
 import { ReactNode } from "react";
 
-const inter = Inter({ subsets: ["latin"] });
-
+const poppings = localFont({
+  src: [
+    {
+      path: "./fonts/Poppins-Regular.ttf",
+      weight: "400",
+    },
+    // {
+    //   path: "./fonts/Poppins-Black.ttf",
+    //   weight: "400",
+    // },
+    {
+      path: "./fonts/Poppins-Bold.ttf",
+      weight: "700",
+    },
+    // {
+    //   path: "./fonts/Poppins-SemiBold.ttf",
+    //   weight: "700",
+    // },
+  ],
+  variable: "--font-poppins",
+});
 export const metadata: Metadata = {
   metadataBase: new URL(
     "https://portfolio-stbs0s-projects.vercel.app/developer",
@@ -55,7 +74,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.className} overflow-y-scroll overflow-x-hidden relative bg-transparent   `}>
+        className={` ${poppings.variable} overflow-y-scroll overflow-x-hidden relative bg-transparent   `}>
         <SpeedInsights />
         <Analytics />
         <Layout>{children}</Layout>
