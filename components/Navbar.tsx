@@ -35,10 +35,21 @@ const Navbar = () => {
           />
         </Link>
 
-        <div className='flex flex-row gap-5'>
+        <div className='flex py-2 flex-row gap-5'>
+            <a
+              href='/pdf/cv-pharmacist.pdf'
+              download={"Mohammed Mahmoud - Pharmacist CV.pdf"}>
+          <button className="animate-pulse bg-blue-400 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg">
+              Download CV
+          </button>
+            </a>
           <button
-            onClick={() => window.open(`mailto:mohammedjrt@gmail.com?subject=${subject}&body=${body}`)}
-            className={` z-[1] bg-transparent  padding-10 cursor-pointer   rounded-xl    py-2 px-5 ${
+            onClick={() =>
+              window.open(
+                `mailto:mohammedjrt@gmail.com?subject=${subject}&body=${body}`,
+              )
+            }
+            className={` bg-transparent  padding-10 cursor-pointer   rounded-xl     px-5 ${
               isDeveloper(career as string)
                 ? "text-white hover:bg-[#2E2E2E]"
                 : "hover:bg-[#2E2E2E] hover:text-white"
