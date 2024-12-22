@@ -1,4 +1,3 @@
-"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -7,6 +6,7 @@ import { Careers } from "@/app/[career]/page";
 
 import PageSwitcher from "./CareerSwitcher";
 import { isDeveloper } from "@/lib/utils";
+import ContactMeBtn from "./ContactMeBtn";
 const Banner = ({ career }: { career: Careers }) => {
   return (
     <section className='flex flex-row items-center justify-center px-20 mt-[100px] z-[20] '>
@@ -19,6 +19,7 @@ const Banner = ({ career }: { career: Careers }) => {
             width={250}
             className=' rounded-full '
             alt='Mohammed Ibrahim Mahamoud'
+            
           />
         </div>
 
@@ -54,15 +55,7 @@ const Banner = ({ career }: { career: Careers }) => {
           {BANNER[career]}
         </p>
         <div className='text-md flex justify-center'>
-          <button
-            onClick={() => window.open("mailto:mohammedjrt@gmail.com")}
-            className={` z-[1]     padding-20  ${
-              isDeveloper(career)
-                ? "text-white hover:bg-white border-white hover:text-black"
-                : "hover:bg-black hover:text-white border-black "
-            }  rounded-3xl   font-semibold  py-3 px-10  border-[0.1px]  hover:border-transparent `}>
-            Contact Me
-          </button>
+          <ContactMeBtn career={career} />
         </div>
       </div>
     </section>
