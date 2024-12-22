@@ -1,22 +1,22 @@
 export const Social_Icons = [
   {
     link: "https://github.com/stbs0",
-    image: "/Github.svg",
+    image: "/others/Github.svg",
     alt: "Mohammed Mahmoud - Social Media",
   },
   {
     link: "https://www.instagram.com/stbs0/?hl=en",
-    image: "/Instagram.svg",
+    image: "/others/Instagram.svg",
     alt: "Mohammed Mahmoud - Social Media",
   },
   {
     link: "https://www.linkedin.com/in/mohammed-ibrahim-mahmoud/",
-    image: "/LinkedIn.svg",
+    image: "/others/LinkedIn.svg",
     alt: "Mohammed Mahmoud - Social Media",
   },
   {
     link: "https://twitter.com/Ibrahimmemonnn",
-    image: "/Twitter.svg",
+    image: "/others/Twitter.svg",
     alt: "Mohammed Mahmoud - Social Media",
   },
 ];
@@ -42,22 +42,28 @@ export const PROJECTS = [
   {
     title: "Sudan Codex",
     url: "",
-    image: "/purpleLogo.png",
+    image: "/projects/purpleLogo.png",
     description:
       "developed a website that provide FDA drug labeling information for heath care providers in Sudan, using ReactJS, TypeScript and Tailwind CSS",
   },
   {
     title: "YC Directory",
     url: "https://yc-directory-rouge-tau.vercel.app/",
-    image: "/yc_logo.png",
+    image: "/projects/yc_logo.png",
     description:
       "A website build with Next.js, TypeScript that allows users to view, add startups and companies to the YC Directory",
   },
   {
     title: "Space Tourism",
     url: "https://space-tourism-one-umber.vercel.app",
-    image: "/space_toursm_logo.svg",
+    image: "/projects/space_toursm_logo.svg",
     description: "A website about space tourism",
+  },
+  {
+    title: "Space Tourism",
+    url: "https://memory-card-orcin-two.vercel.app/",
+    image: "/projects/pokeball.png",
+    description: "a memory card game where you have to match the cards",
   },
 ];
 
@@ -91,7 +97,7 @@ export const EXPERIENCES = [
       "Performed technical processes required to dispense medications to patients.",
       "Reconstituted numerous I.V medicine in the I.V room.",
     ],
-    img: "DR_Soliman.svg",
+    img: "/experiences/DR_Soliman.svg",
   },
 
   {
@@ -105,7 +111,7 @@ export const EXPERIENCES = [
       "Experienced in documenting and managing narcotic and controlled medications through the Sehhaty and Raqeeb platforms.",
       "Educated patients on possible drug interactions, potential side effects, and optimal methods of administration.",
     ],
-    img: "/DR_Samir.jpg",
+    img: "/experiences/DR_Samir.jpg",
   },
 
   {
@@ -121,7 +127,7 @@ export const EXPERIENCES = [
       "Counseled patients on medication usage, potential side effects, and drug interactions to promote safe and effective treatment outcomes",
       "Verified safety and accuracy of physician orders.",
     ],
-    img: "/ALfoaad.png",
+    img: "/experiences/ALfoaad.png",
   },
 ];
 
