@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import localFont from "next/font/local";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 import Layout from "@/components/Layout";
 import { ReactNode } from "react";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
 
 const poppings = localFont({
   src: [
@@ -51,7 +52,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <script
+        <Script
+          id="ld-json"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -67,11 +69,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             }),
           }}
         />
+      
       </head>
+      <GoogleAnalytics gaId="G-9SF27F3H6H" />
+
       <body
         className={` ${poppings.variable} relative overflow-x-hidden overflow-y-scroll bg-transparent`}
       >
-        <GoogleAnalytics gaId="G-7WDY34KCHX" />
         <Layout>{children}</Layout>
       </body>
     </html>
