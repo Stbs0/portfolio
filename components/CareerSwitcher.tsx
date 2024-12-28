@@ -16,30 +16,33 @@ export default function PageSwitcher({ career }: { career: Careers }) {
   };
 
   return (
-    <div className='flex flex-col pt-4'>
+    <div className="flex flex-col pt-4">
       <p className={`${isDeveloper ? "text-gray-300" : "text-gray-700"}`}>
         {" "}
         click on the switch tp view the other careers
       </p>
-      <div className='flex items-center justify-center gap-4 p-4 pt-1  rounded-md '>
+      <div className="flex items-center justify-center gap-4 rounded-md p-4 pt-1">
         <span
           className={`${
             isDeveloper ? "text-gray-300" : "text-gray-700"
-          } text-sm font-medium `}>
+          } text-sm font-medium`}
+        >
           Developer
         </span>
         <Switch
-          size='lg'
+          size="lg"
+          className=""
           isSelected={isDeveloper}
           endContent={<Pill />}
           startContent={<Binary />}
           onChange={(e) => handleToggle(e.target.checked)}
-          color='default'
+          color="default"
         />
         <span
           className={`${
             isDeveloper ? "text-gray-300" : "text-gray-700"
-          } text-sm font-medium text-gray-600`}>
+          } text-sm font-medium`}
+        >
           Pharmacist
         </span>
       </div>

@@ -15,23 +15,24 @@ const Project = ({
 }) => {
   return (
     <a
-      className='w-full h-full'
+      className="h-full w-full"
       href={url}
-      rel='noopener noreferrer'
-      target='_blank'>
-      <div className='flex-row flex  justify-start'>
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <div className="flex flex-row justify-start">
         <Image
           src={image}
           height={30}
           width={170}
           // Make the image display full width
 
-          className='bg-slate-300/50 rounded-md p-2  h-auto'
-          alt='Mohammed Mahmoud - UX Design Project'
+          className="h-auto rounded-md bg-slate-300/50 p-2"
+          alt="Mohammed Mahmoud - UX Design Project"
         />
-        <div className='p-3'>
-          <p className='dark:text-white font-semibold text-xl'>{title}</p>
-          <p className='dark:text-gray-500 text-[10px]'>{description}</p>
+        <div className="p-3">
+          <p className="text-xl font-semibold dark:text-white">{title}</p>
+          <p className="text-[10px] dark:text-gray-500">{description}</p>
         </div>
       </div>
     </a>
@@ -40,16 +41,15 @@ const Project = ({
 
 const Projects = () => {
   return (
-    <section id='projects'>
-      <h2 className='text-white font-semibold text-center text-6xl pt-[35px]'>
+    <section id="projects">
+      <h2 className="pt-[35px] text-center text-6xl font-semibold text-white">
         PROJECTS
       </h2>
-      <p className=' tracking-[0.5em] text-center text-transparent font-light pb-5  bg-clip-text bg-gradient-to-r from-purple-700 to-orange-500  text-1xl '>
+      <p className="text-1xl bg-gradient-to-r from-purple-700 to-orange-500 bg-clip-text pb-5 text-center font-light tracking-[0.5em] text-transparent">
         EXPLORE NOW
       </p>
-      <div className='   container mx-auto flex flex-col gap-5  '>
+      <div className="container mx-auto flex flex-col gap-5">
         {PROJECTS.map((project, index) => (
-        
           <Project
             key={index}
             title={project.title}

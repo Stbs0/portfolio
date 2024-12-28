@@ -17,7 +17,10 @@ export async function generateMetadata({
     title: career,
     description: ABOUT_ME[career].join(" "),
     keywords: SEO_KEYWORDS[career],
-    icons: process.env.NODE_ENV === "production" ? process.env.NEXT_PUBLIC_BASE_URL + `/icon-${career}.png` : `http://localhost:3000/icon/icon-${career}.png`,
+    icons:
+      process.env.NODE_ENV === "production"
+        ? process.env.NEXT_PUBLIC_BASE_URL + `/icon-${career}.png`
+        : `http://localhost:3000/icon/icon-${career}.png`,
   };
 }
 

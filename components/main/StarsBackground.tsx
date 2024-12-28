@@ -1,6 +1,6 @@
 "use client";
 
-import React, {useRef,  useMemo } from "react";
+import React, { useRef, useMemo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
 // @ts-expect-error I don't care
@@ -9,11 +9,12 @@ import { useParams } from "next/navigation";
 import { isDeveloper } from "@/lib/utils";
 
 
-const StarBackground = () => {
+const StarBackground =  () => {
   const ref = useRef(null);
-   const sphere = useMemo(() => {
-     return random.inSphere(new Float32Array(5000 * 3), { radius: 1.2 });
-   }, []);
+
+  const sphere = useMemo(() => {
+    return random.inSphere(new Float32Array(2500 * 3), { radius: 1.2 });
+  }, []);
   const career = useParams().career;
 
   useFrame((state, delta) => {
@@ -37,11 +38,7 @@ const StarBackground = () => {
   });
   return (
     <group rotation={[4, 2, Math.PI / 4]}>
-      <Points
-        ref={ref}
-        positions={sphere}
-        stride={3}
-        frustumCulled>
+      <Points ref={ref} positions={sphere} stride={3} frustumCulled>
         <PointMaterial
           transparent
           color={career === "developer" ? "#fff" : "#000000"}
@@ -61,7 +58,7 @@ const StarsCanvas = () => {
     <div
       className={`w-full h-auto fixed inset-0 ${
         isDeveloper(career as string) ? "bg-black " : "bg-[#fdfdfd]"
-      } z-[-2]
+      } z-[-1]
        `}>
       <Canvas camera={{ position: [0, 0, 1] }}>
         <StarBackground />

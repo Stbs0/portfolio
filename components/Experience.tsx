@@ -21,29 +21,27 @@ const Job = ({
   responsibility: string[];
 }) => {
   return (
-    <div className=' container mx-auto 2xl '>
-      <div className='flex md:flex-row  gap-4 pt-5'>
+    <div className="2xl container mx-auto">
+      <div className="flex gap-4 pt-5 md:flex-row">
         <Image
           src={img}
           height={60}
           width={60}
-          className=' w-max-[60px] '
+          className="w-max-[60px]"
           alt={"Mohammed Mahmoud - Pharmacy Inter"}
         />
-        <div className='flex  items-center *:text-left flex-col '>
-          <p className={`text-black  `}>
-            <span className='font-semibold'>{company} </span>/ {job}
+        <div className="flex flex-col items-center *:text-left">
+          <p className={`text-black`}>
+            <span className="font-semibold">{company} </span>/ {job}
           </p>
-          <p className='text-black md:pt-0 pt-3 w-full '>
+          <p className="w-full pt-3 text-black md:pt-0">
             {startDate} - {endDate} / {location}
           </p>
         </div>
       </div>
-      <ol className='list-disc dark:text-black-300 pl-20'>
+      <ol className="dark:text-black-300 list-disc pl-20">
         {responsibility.map((responsibility, index) => (
-          <li
-            className='text-black pt-5'
-            key={index}>
+          <li className="pt-5 text-black" key={index}>
             {responsibility}
           </li>
         ))}
@@ -54,21 +52,19 @@ const Job = ({
 
 const Experience = ({ career }: { career: Careers }) => {
   return (
-    <section id='experience'>
+    <section id="experience">
       <h2
         className={`${
           isDeveloper(career) ? "text-white" : ""
-        }  font-semibold text-center text-6xl   pt-[35px]`}>
+        } pt-[35px] text-center text-6xl font-semibold`}
+      >
         EXPERIENCE
       </h2>
-      <p className=' tracking-[0.5em] text-center text-transparent font-light pb-5  bg-clip-text bg-gradient-to-r from-purple-700 to-orange-500  text-1xl '>
+      <p className="text-1xl bg-gradient-to-r from-purple-700 to-orange-500 bg-clip-text pb-5 text-center font-light tracking-[0.5em] text-transparent">
         EXPLORE NOW
       </p>
       {EXPERIENCES.map((experience, index) => (
-        <Job
-          key={index}
-          {...experience}
-        />
+        <Job key={index} {...experience} />
       ))}
     </section>
   );

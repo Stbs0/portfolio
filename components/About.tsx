@@ -4,29 +4,32 @@ import { isDeveloper } from "@/lib/utils";
 import React from "react";
 
 const About = ({ career }: { career: Careers }) => {
-  console.log(career)
+  console.log(career);
   return (
     <section
-      id='about'
-      className='flex flex-col items-center justify-center h-full relative overflow-hidden pt-[35px] '
-      style={{ transform: "scale(0.9)" }}>
-      <div className='flex flex-col  justify-around flex-wrap items-center   max-w-[900px]'>
+      id="about"
+      className="relative flex h-full flex-col items-center justify-center overflow-hidden pt-[35px]"
+      style={{ transform: "scale(0.9)" }}
+    >
+      <div className="flex max-w-[900px] flex-col flex-wrap items-center justify-around">
         <h1
           className={`${
             isDeveloper(career) ? "text-white" : ""
-          }  font-semibold text-6xl`}>
+          } text-6xl font-semibold`}
+        >
           ABOUT ME
         </h1>
-        <p className=' tracking-[0.5em] text-transparent font-light pb-5  bg-clip-text bg-gradient-to-r from-purple-700 to-orange-500  text-1xl'>
+        <p className="text-1xl bg-gradient-to-r from-purple-700 to-orange-500 bg-clip-text pb-5 font-light tracking-[0.5em] text-transparent">
           EXPLORE NOW
         </p>
-        <div className='space-y-4 text-center'>
+        <div className="space-y-4 text-center">
           {ABOUT_ME[career].map((paragraph, index) => (
             <p
-              className={`  ${
+              className={` ${
                 isDeveloper(career) ? "text-gray-300" : "text-black"
-              }  `}
-              key={index}>
+              } `}
+              key={index}
+            >
               {paragraph}
             </p>
           ))}

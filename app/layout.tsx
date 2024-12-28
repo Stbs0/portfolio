@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+
 import localFont from "next/font/local";
 
 import Layout from "@/components/Layout";
 import { ReactNode } from "react";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const poppings = localFont({
   src: [
@@ -52,13 +52,12 @@ export default function RootLayout({
   children,
 }: {
   children: ReactNode;
-  params: { career: string };
 }) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <head>
         <script
-          type='application/ld+json'
+          type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "http://schema.org",
@@ -75,9 +74,9 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={` ${poppings.variable} overflow-y-scroll overflow-x-hidden relative bg-transparent   `}>
-        <SpeedInsights />
-        <Analytics />
+        className={` ${poppings.variable} relative overflow-x-hidden overflow-y-scroll bg-transparent`}
+      >
+        <GoogleAnalytics />
         <Layout>{children}</Layout>
       </body>
     </html>
