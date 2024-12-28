@@ -5,7 +5,7 @@ import localFont from "next/font/local";
 
 import Layout from "@/components/Layout";
 import { ReactNode } from "react";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const poppings = localFont({
   src: [
@@ -35,8 +35,7 @@ export const metadata: Metadata = {
     template: "Mohammed Mahmoud (stbs) - %s Portfolio",
   },
   icons: {
-    icon: "/favicon.ico", 
-  
+    icon: "/favicon.ico",
   },
   // openGraph: {
   //   title: "Mohammed Mahmoud - SWE | IXD | UX",
@@ -48,11 +47,7 @@ export const metadata: Metadata = {
   //   canonical: "https://ibiimemon.com/",
   // },
 };
-export default function RootLayout({
-  children,
-}: {
-  children: ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
@@ -76,7 +71,7 @@ export default function RootLayout({
       <body
         className={` ${poppings.variable} relative overflow-x-hidden overflow-y-scroll bg-transparent`}
       >
-        <GoogleTagManager gtmId="GTM-P46JHMLZ" />
+        <GoogleAnalytics gaId="G-7WDY34KCHX" />
         <Layout>{children}</Layout>
       </body>
     </html>

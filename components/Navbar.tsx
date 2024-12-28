@@ -25,6 +25,7 @@ const Navbar = () => {
           href="/"
           className="mr-auto flex h-auto w-auto flex-row items-center"
         >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/others/signature.png"
             alt="Mohammed Mahmoud - Developer / Pharmacist"
