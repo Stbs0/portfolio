@@ -69,9 +69,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             }),
           }}
         />
-      
       </head>
-      <GoogleAnalytics gaId="G-9SF27F3H6H" />
+      <GoogleAnalytics gaId="G-3HNBPZ473V" />
 
       <body
         className={` ${poppings.variable} relative overflow-x-hidden overflow-y-scroll bg-transparent`}
