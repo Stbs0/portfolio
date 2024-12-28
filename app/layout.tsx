@@ -5,7 +5,7 @@ import localFont from "next/font/local";
 
 import Layout from "@/components/Layout";
 import { ReactNode } from "react";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const poppings = localFont({
   src: [
@@ -76,7 +76,7 @@ export default function RootLayout({
       <body
         className={` ${poppings.variable} relative overflow-x-hidden overflow-y-scroll bg-transparent`}
       >
-        <GoogleAnalytics />
+        <GoogleTagManager gtmId="GTM-P46JHMLZ" />
         <Layout>{children}</Layout>
       </body>
     </html>
