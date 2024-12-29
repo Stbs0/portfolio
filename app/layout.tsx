@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import localFont from "next/font/local";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 import Layout from "@/components/Layout";
 import { ReactNode } from "react";
@@ -70,8 +70,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           }}
         />
       </head>
-      <GoogleAnalytics gaId="G-3HNBPZ473V" />
-
+      <GoogleTagManager gtmId="GTM-TPPSZRGP" />
       <body
         className={` ${poppings.variable} relative overflow-x-hidden overflow-y-scroll bg-transparent`}
       >
