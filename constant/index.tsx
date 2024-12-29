@@ -48,20 +48,20 @@ export const PROJECTS = [
   },
   {
     title: "YC Directory",
-    url: "https://yc-directory-rouge-tau.vercel.app/",
+    url: "https://yc-directory-stbs0s-projects.vercel.app/",
     image: "/projects/yc_logo.png",
     description:
       "A website build with Next.js, TypeScript that allows users to view, add startups and companies to the YC Directory",
   },
   {
     title: "Space Tourism",
-    url: "https://space-tourism-one-umber.vercel.app",
+    url: "https://space-tourism-stbs0s-projects.vercel.app/",
     image: "/projects/space_toursm_logo.svg",
     description: "A website about space tourism",
   },
   {
     title: "PokeCards",
-    url: "https://memory-card-orcin-two.vercel.app/",
+    url: "https://memory-card-stbs0s-projects.vercel.app/",
     image: "/projects/pokeball.png",
     description: "a memory card game where you have to match the cards",
   },
