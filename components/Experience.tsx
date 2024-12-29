@@ -1,7 +1,6 @@
 import { type Careers } from "@/app/[career]/page";
 import { EXPERIENCES } from "@/constant";
 import { isDeveloper } from "@/lib/utils";
-import Image from "next/image";
 
 const Job = ({
   job,
@@ -23,11 +22,11 @@ const Job = ({
   return (
     <div className="2xl container mx-auto">
       <div className="flex gap-4 pt-5 md:flex-row">
-        <Image
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src={img}
-          height={60}
-          width={60}
-          className="w-max-[60px]"
+         
+          className="size-16 "
           alt={"Mohammed Mahmoud - Pharmacy Inter"}
         />
         <div className="flex flex-col items-center *:text-left">
@@ -41,7 +40,7 @@ const Job = ({
       </div>
       <ol className="dark:text-black-300 list-disc pl-20">
         {responsibility.map((responsibility, index) => (
-          <li className="pt-5 text-black" key={index}>
+          <li className="pt-5 text-pretty text-black" key={index}>
             {responsibility}
           </li>
         ))}

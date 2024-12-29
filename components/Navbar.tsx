@@ -23,23 +23,25 @@ const Navbar = () => {
         <Link
           title="Mohammed Mahmoud logo"
           href="/"
-          className="mr-auto flex h-auto w-auto flex-row items-center"
+          className="mr-auto "
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/others/signature.png"
             alt="Mohammed Mahmoud - Developer / Pharmacist"
-            className={`h-auto w-16 ${isDeveloper(career as string) ? "invert" : ""} `}
+            className={`object-contain w-12 ${isDeveloper(career as string) ? "invert" : ""} `}
           />
         </Link>
 
         {career === "pharmacist" && (
           <a
-            className="animate-pulse rounded-lg bg-blue-400 px-4 py-2 font-bold text-white hover:bg-blue-600"
+            className=""
             href="/pdf/cv-pharmacist.pdf"
             download={"Mohammed Mahmoud - Pharmacist CV.pdf"}
           >
-            <button>Download CV</button>
+            <button className="animate-pulse text-nowrap rounded-lg bg-blue-400 px-4 py-2 font-bold text-white hover:bg-blue-600">
+              Download CV
+            </button>
           </a>
         )}
         <button
@@ -48,7 +50,7 @@ const Navbar = () => {
               `mailto:mohammedjrt@gmail.com?subject=${subject}&body=${body}`,
             )
           }
-          className={`padding-10 cursor-pointer rounded-xl bg-transparent px-5 ${
+          className={`cursor-pointer rounded-xl bg-transparent p-2 px-5 active:scale-95 focus:outline-none ${
             isDeveloper(career as string)
               ? "text-white hover:bg-[#2E2E2E]"
               : "hover:bg-[#2E2E2E] hover:text-white"

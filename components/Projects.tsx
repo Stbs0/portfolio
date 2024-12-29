@@ -1,5 +1,4 @@
 import { PROJECTS } from "@/constant";
-import Image from "next/image";
 import React from "react";
 
 const Project = ({
@@ -21,14 +20,13 @@ const Project = ({
       target="_blank"
     >
       <div className="flex flex-row justify-start">
-        <Image
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src={image}
-          height={30}
-          width={170}
-          // Make the image display full width
+          
 
-          className="h-auto rounded-md bg-slate-300/50 p-2"
-          alt="Mohammed Mahmoud - UX Design Project"
+          className="h-auto rounded-md bg-white/80 p-1 w-20 object-contain"
+          alt="Mohammed Mahmoud -  Project"
         />
         <div className="p-3">
           <p className="text-xl font-semibold dark:text-white">{title}</p>

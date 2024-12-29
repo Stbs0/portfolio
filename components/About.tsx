@@ -25,7 +25,7 @@ const About = ({ career }: { career: Careers }) => {
         <div className="space-y-4 text-center">
           {ABOUT_ME[career].map((paragraph, index) => (
             <p
-              className={` ${
+              className={`text-balance ${
                 isDeveloper(career) ? "text-gray-300" : "text-black"
               } `}
               key={index}
