@@ -22,7 +22,8 @@ const Skills = ({ career }: { career: Careers }) => {
 
       <Accordion
         orientation="vertical"
-        className="flex flex-col items-center gap-4 pt-4 *:text-white"
+        className={`flex flex-col items-center gap-4 pt-4 *:text-white ${
+          isDeveloper(career) ? "invert" : ""}`}
         type="single"
         collapsible
       >
@@ -30,11 +31,11 @@ const Skills = ({ career }: { career: Careers }) => {
           <AccordionItem
             value={skill.name}
             key={skill.name}
-            className="w-[300px] rounded-2xl bg-gray-800/80 p-4 md:w-[400px]"
+            className="w-[300px] rounded-2xl bg-black/80 p-4 sm:w-[500px] lg:w-[600px]"
           >
             <AccordionTrigger className="outline-none">
               <div className="flex items-center gap-4">
-                <skill.Icon className="h-10 w-10 rounded-large bg-stone-700 p-2 text-gray-300" />
+                <skill.Icon className="h-10 w-10 rounded-large bg-white p-2 text-black" />
                 <div>
                   <h2>{skill.name}</h2>
                   <p className="text-xs font-light text-gray-300/80">
@@ -43,11 +44,11 @@ const Skills = ({ career }: { career: Careers }) => {
                 </div>
               </div>
             </AccordionTrigger>
-            <AccordionContent className="grid grid-cols-2 gap-2 text-wrap">
+            <AccordionContent className="grid grid-cols-1 gap-2 sm:grid-cols-2">
               {skill.skills.map((skill) => (
                 <Button
                   key={skill}
-                  className="h-auto text-wrap bg-gray-600 hover:bg-gray-700"
+                  className="cursor-pointer text-balance h-auto rounded-lg bg-white/80 text-center text-black hover:bg-white/90 "
                 >
                   {skill}
                 </Button>
