@@ -1,7 +1,6 @@
 import { Careers } from "@/app/[career]/page";
 import { ABOUT_ME } from "@/constant";
 import { isDeveloper } from "@/lib/utils";
-import React from "react";
 
 const About = ({ career }: { career: Careers }) => {
   console.log(career);
@@ -15,14 +14,12 @@ const About = ({ career }: { career: Careers }) => {
         <h1
           className={`${
             isDeveloper(career) ? "text-white" : ""
-          } text-6xl font-semibold`}
+          } text-6xl font-semibold `}
         >
           ABOUT ME
         </h1>
-        <p className="text-1xl bg-gradient-to-r from-purple-700 to-orange-500 bg-clip-text pb-5 font-light tracking-[0.5em] text-transparent">
-          EXPLORE NOW
-        </p>
-        <div className="space-y-4 text-center">
+
+        <div className="space-y-4 text-center pt-4">
           {ABOUT_ME[career].map((paragraph, index) => (
             <p
               className={`text-balance ${
