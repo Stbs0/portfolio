@@ -72,7 +72,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <GoogleTagManager gtmId="GTM-TPPSZRGP" />
       <body
-        className={` ${poppings.variable} relative overflow-x-hidden overflow-y-scroll bg-transparent`}
+        className={` ${poppings.variable} relative overflow-x-hidden overflow-y-scroll bg-transparent min-w-[475px]`}
       >
         <Layout>{children}</Layout>
       </body>
