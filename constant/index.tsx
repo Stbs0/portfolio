@@ -1,3 +1,5 @@
+import { Database, Globe, Layers, Pill, ShieldPlus, Wrench } from "lucide-react";
+
 export const Social_Icons = [
   {
     link: "https://github.com/stbs0",
@@ -67,20 +69,92 @@ export const PROJECTS = [
   },
 ];
 
-export const SKILLS = [
-  "HTML",
-  "CSS",
-  "Tailwind CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Express",
-  "MongoDB",
-  "Git",
-  "GitHub",
-];
+export const SKILLS = {
+  developer: [
+    {
+      name: "Web Technologies",
+      description: "Frontend & frameworks",
+      skills: [
+        "HTML/CSS",
+        "React",
+        "React Native",
+        "TypeScript",
+        "Next.js",
+        "Vite",
+        "Tailwind CSS",
+        "Node.js",
+      ],
+      Icon: Globe,
+    },
+    {
+      name: "Backend & Databases",
+      description: "Server & data management",
+      skills: [
+        "Express",
+        "MongoDB",
+        "PostgreSQL",
+        "Prisma",
+        "SQL",
+        "Firebase",
+        "Graphql",
+        "Sanity",
+      ],
+      Icon: Database,
+    },
+    {
+      name: "Tools & Technologies",
+      description: "Development tools",
+      skills: [
+        "Git/GitHub",
+        "Github Actions",
+
+        "Playwright",
+        "Vitest",
+        "Google Tag Manager",
+        "Google Analytics",
+      ],
+      Icon: Wrench,
+    },
+  ],
+  pharmacist: [
+    {
+      name: "Pharmaceutical Expertise",
+      description: "Medicine Management and Patient Care",
+      skills: [
+        "Drug Therapy Management",
+        "Knowledge in medication administration and dispensing",
+        "Patient Counseling",
+        "Inventory Management",
+        "Patient Education and Counseling",
+        "Thorough and paying attention to detail",
+      ],
+      Icon: Pill,
+    },
+    {
+      name: "Professional Conduct",
+      description: "Professionalism and Ethical Standards",
+      skills: [
+        "Ability to accept criticism and work well under pressure",
+        "Confidentiality",
+        "Knowledgeable of regulatory restrictions and regulations",
+        "Experience with Raqeeb and Sehati platforms",
+      ],
+      Icon: ShieldPlus,
+    },
+    {
+      name: "Communication & Collaboration",
+      description: "Teamwork and Customer Interaction",
+      skills: [
+        "Ability to work in a team",
+        "Outstanding customer service",
+
+        "Excellent verbal communication skills",
+        "Patience and the ability to remain calm in stressful situations",
+      ],
+      Icon: Layers,
+    },
+  ],
+};
 
 export const EXPERIENCES = [
   {
