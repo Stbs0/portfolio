@@ -5,6 +5,7 @@ import { Careers } from "@/app/[career]/page";
 import PageSwitcher from "./CareerSwitcher";
 import { isDeveloper } from "@/lib/utils";
 import ContactMeBtn from "./ContactMeBtn";
+import { MapPin } from "lucide-react";
 const Banner = ({ career }: { career: Careers }) => {
   return (
     <section className="mt-[100px] flex flex-row items-center justify-center px-20">
@@ -25,6 +26,10 @@ const Banner = ({ career }: { career: Careers }) => {
         >
           Mohammed Mahmoud
         </h1>
+
+        <p className="flex items-center justify-center gap-2 font-semibold">
+          <MapPin /> <span>Jeddah, Saudi Arabia</span>
+        </p>
 
         <PageSwitcher career={career} />
         <p
