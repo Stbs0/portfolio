@@ -25,12 +25,12 @@ const Project = ({
           src={image}
           
 
-          className="h-auto rounded-md bg-white/80 p-1 w-20 object-contain"
+          className="h-auto rounded-md bg-white/90 p-1 w-20 object-contain"
           alt="Mohammed Mahmoud -  Project"
         />
         <div className="p-3">
-          <p className="text-xl font-semibold dark:text-white">{title}</p>
-          <p className="text-[10px] dark:text-gray-500">{description}</p>
+          <p className="text-xl font-semibold text-white">{title}</p>
+          <p className="text-[10px] text-white/70">{description}</p>
         </div>
       </div>
     </a>
