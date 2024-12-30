@@ -20,8 +20,8 @@ export async function generateMetadata({
     keywords: SEO_KEYWORDS[career],
     icons:
       process.env.NODE_ENV === "production"
-        ? process.env.NEXT_PUBLIC_BASE_URL + `/icon-${career}.png`
-        : `http://localhost:3000/icon/icon-${career}.png`,
+        ? process.env.NEXT_PUBLIC_BASE_URL + `/icon-${career}.svg`
+        : `http://localhost:3000/icon/icon-${career}.svg`,
   };
 }
 
