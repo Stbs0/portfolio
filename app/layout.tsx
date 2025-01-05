@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import localFont from "next/font/local";
 import { GoogleTagManager } from "@next/third-parties/google";
+import localFont from "next/font/local";
 
 import Layout from "@/components/Layout";
-import { ReactNode } from "react";
 import Script from "next/script";
+import { ReactNode } from "react";
 
 const poppings = localFont({
   src: [
@@ -30,23 +30,11 @@ const poppings = localFont({
   variable: "--font-poppins",
 });
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL("https://www.mohammedibrahimmahmoud.pro"),
   title: {
     default: "Mohammed Mahmoud (stbs) - Developer Portfolio",
     template: "Mohammed Mahmoud (stbs) - %s Portfolio",
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
-  // openGraph: {
-  //   title: "Mohammed Mahmoud - SWE | IXD | UX",
-  //   description:
-  //     "Frontend & Mobile App Developer from Pakistan with 3+ years of expertise. Senior Software Engineer. Specializing mobile apps, UX, and JavaScript technologies.",
-  //   // images: "/OpenGraph.jpg",
-  // },
-  // alternates: {
-  //   canonical: "https://ibiimemon.com/",
-  // },
 };
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -61,7 +49,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               "@type": "Person",
               name: "Mohammed Mahmoud",
               jobTitle: "Web Developer | Pharmacists",
-              url: "https://ibiimemon.com",
+              url: "https://www.mohammedibrahimmahmoud.pro/",
               sameAs: [
                 "https://www.linkedin.com/in/mohammed-ibrahim-mahmoud/",
                 "https://github.com/stbs0",
@@ -72,7 +60,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <GoogleTagManager gtmId="GTM-TPPSZRGP" />
       <body
-        className={` ${poppings.variable} relative overflow-x-hidden overflow-y-scroll bg-transparent min-w-[475px]`}
+        className={` ${poppings.variable} relative min-w-[475px] overflow-x-hidden overflow-y-scroll bg-transparent`}
       >
         <Layout>{children}</Layout>
       </body>

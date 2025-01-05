@@ -18,8 +18,8 @@ export default function PageSwitcher({ career }: { career: Careers }) {
   return (
     <div className="flex flex-col pt-4">
       <p className={`${isDeveloper ? "text-gray-300" : "text-gray-700"}`}>
-        {" "}
-        Click on the switch tp view the other careers
+
+        Click on the switch to view the other careers
       </p>
       <div className="flex items-center justify-center gap-4 rounded-md p-4 pt-1">
         <span

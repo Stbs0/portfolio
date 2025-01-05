@@ -46,7 +46,7 @@ export const PROJECTS = [
     url: "",
     image: "/projects/purpleLogo.png",
     description:
-      "developed a website that provide FDA drug labeling information for heath care providers in Sudan, using ReactJS, TypeScript and Tailwind CSS",
+      "Developed a website that provide FDA drug labeling information for heath care providers in Sudan, using ReactJS, vite, TypeScript and Tailwind CSS",
   },
   {
     title: "YC Directory",
@@ -59,7 +59,7 @@ export const PROJECTS = [
     title: "Space Tourism",
     url: "https://space-tourism-stbs0s-projects.vercel.app/",
     image: "/projects/space_toursm_logo.svg",
-    description: "A website about space tourism",
+    description: "A website about space tourism using ReactJS, and Tailwind CSS",
   },
   {
     title: "PokeCards",
@@ -82,7 +82,6 @@ export const SKILLS = {
         "Next.js",
         "Vite",
         "Tailwind CSS",
-        "Node.js",
       ],
       Icon: Globe,
     },
@@ -92,6 +91,8 @@ export const SKILLS = {
       skills: [
         "Express",
         "MongoDB",
+        "MongoDB",
+        "Node.js",
         "PostgreSQL",
         "Prisma",
         "SQL",

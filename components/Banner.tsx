@@ -1,11 +1,10 @@
-import React from "react";
-import { BANNER } from "@/constant";
 import { Careers } from "@/app/[career]/page";
+import { BANNER } from "@/constant";
 
-import PageSwitcher from "./CareerSwitcher";
 import { isDeveloper } from "@/lib/utils";
-import ContactMeBtn from "./ContactMeBtn";
 import { MapPin } from "lucide-react";
+import PageSwitcher from "./CareerSwitcher";
+import ContactMeBtn from "./ContactMeBtn";
 const Banner = ({ career }: { career: Careers }) => {
   return (
     <section className="mt-[100px] flex flex-row items-center justify-center px-20">
@@ -27,7 +26,9 @@ const Banner = ({ career }: { career: Careers }) => {
           Mohammed Mahmoud
         </h1>
 
-        <p className="flex items-center justify-center gap-2 font-semibold">
+        <p
+          className={`flex items-center justify-center gap-2 font-semibold ${isDeveloper(career) ? "text-gray-200" : "text-gray-800"}`}
+        >
           <MapPin /> <span>Jeddah, Saudi Arabia</span>
         </p>
 
