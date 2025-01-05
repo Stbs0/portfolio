@@ -25,6 +25,7 @@ export async function generateMetadata({
   };
 }
 
+
 export default function Career({ params }: { params: { career: Careers } }) {
   const career = params?.career;
 

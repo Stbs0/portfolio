@@ -1,6 +1,5 @@
 "use client";
 import { isDeveloper } from "@/lib/utils";
-import React from "react";
 
 const ContactMeBtn = ({ career }: { career: string }) => {
   return (

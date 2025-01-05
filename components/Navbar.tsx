@@ -3,7 +3,6 @@
 import { isDeveloper } from "@/lib/utils";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import React from "react";
 
 const Navbar = () => {
   const { career } = useParams();

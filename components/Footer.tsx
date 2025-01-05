@@ -1,7 +1,6 @@
-import React from "react";
 import { Social_Icons } from "@/constant";
-import Image from "next/image";
 import { isDeveloper } from "@/lib/utils";
+import Image from "next/image";
 
 const Footer = ({ career }: { career: string }) => {
   return (

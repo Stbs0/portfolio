@@ -14,12 +14,12 @@ const About = ({ career }: { career: Careers }) => {
         <h1
           className={`${
             isDeveloper(career) ? "text-white" : ""
-          } text-6xl font-semibold `}
+          } text-6xl font-semibold`}
         >
           ABOUT ME
         </h1>
 
-        <div className="space-y-4 text-center pt-4">
+        <div className="space-y-4 pt-4 text-center">
           {ABOUT_ME[career].map((paragraph, index) => (
             <p
               className={`text-balance ${

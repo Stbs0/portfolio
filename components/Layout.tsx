@@ -1,4 +1,4 @@
-import {  ReactNode } from "react";
+import { ReactNode } from "react";
 import Navbar from "./Navbar";
 // import ProgressPage from "./ProgressPage";
 import StarsCanvas from "./main/StarsBackground";

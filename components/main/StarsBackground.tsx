@@ -1,15 +1,14 @@
 "use client";
 
-import React, { useRef, useMemo } from "react";
+import { isDeveloper } from "@/lib/utils";
+import { PointMaterial, Points } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Points, PointMaterial } from "@react-three/drei";
+import { useMemo, useRef } from "react";
 // @ts-expect-error I don't care
 import * as random from "maath/random/dist/maath-random.esm";
 import { useParams } from "next/navigation";
-import { isDeveloper } from "@/lib/utils";
 
-
-const StarBackground =  () => {
+const StarBackground = () => {
   const ref = useRef(null);
 
   const sphere = useMemo(() => {
@@ -56,10 +55,10 @@ const StarsCanvas = () => {
 
   return (
     <div
-      className={`w-full h-auto fixed inset-0 ${
-        isDeveloper(career as string) ? "bg-black " : "bg-[#fdfdfd]"
-      } z-[-1]
-       `}>
+      className={`fixed inset-0 h-auto w-full ${
+        isDeveloper(career as string) ? "bg-black" : "bg-[#fdfdfd]"
+      } z-[-1]`}
+    >
       <Canvas camera={{ position: [0, 0, 1] }}>
         <StarBackground />
       </Canvas>

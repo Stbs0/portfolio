@@ -1,5 +1,4 @@
 import { PROJECTS } from "@/constant";
-import React from "react";
 
 const Project = ({
   title,
@@ -23,7 +22,7 @@ const Project = ({
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={image}
-          
+
 
           className="h-auto rounded-md bg-white/90 p-1 w-20 object-contain"
           alt="Mohammed Mahmoud -  Project"
