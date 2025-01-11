@@ -43,27 +43,28 @@ export const ABOUT_ME = {
 export const PROJECTS = [
   {
     title: "Sudan Codex",
-    url: "",
+    url: "https://sudan-codex.web.app",
     image: "/projects/purpleLogo.png",
     description:
       "Developed a website that provide FDA drug labeling information for heath care providers in Sudan, using ReactJS, vite, TypeScript and Tailwind CSS",
   },
   {
     title: "YC Directory",
-    url: "https://yc-directory-stbs0s-projects.vercel.app/",
+    url: "https://yc-directory-stbs0s-projects.vercel.app",
     image: "/projects/yc_logo.png",
     description:
       "A website build with Next.js, TypeScript that allows users to view, add startups and companies to the YC Directory",
   },
   {
     title: "Space Tourism",
-    url: "https://space-tourism-stbs0s-projects.vercel.app/",
+    url: "https://space-tourism-stbs0s-projects.vercel.app",
     image: "/projects/space_toursm_logo.svg",
-    description: "A website about space tourism using ReactJS, and Tailwind CSS",
+    description:
+      "A website about space tourism using ReactJS, and Tailwind CSS",
   },
   {
     title: "PokeCards",
-    url: "https://memory-card-stbs0s-projects.vercel.app/",
+    url: "https://memory-card-stbs0s-projects.vercel.app",
     image: "/projects/pokeball.png",
     description: "a memory card game where you have to match the cards",
   },
