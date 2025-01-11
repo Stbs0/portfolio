@@ -1,6 +1,6 @@
-import { Careers } from "@/app/[career]/page";
 import { ABOUT_ME } from "@/constant";
 import { isDeveloper } from "@/lib/utils";
+import { Careers } from "@/types";
 
 const About = ({ career }: { career: Careers }) => {
   console.log(career);

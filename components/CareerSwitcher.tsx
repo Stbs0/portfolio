@@ -1,6 +1,6 @@
 "use client";
 
-import { Careers } from "@/app/[career]/page";
+import { Careers } from "@/types";
 import { Switch } from "@nextui-org/switch";
 import { Binary, Pill } from "lucide-react";
 import { useRouter } from "next/navigation";

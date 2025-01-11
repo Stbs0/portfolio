@@ -1,6 +1,6 @@
-import { Careers } from "@/app/[career]/page";
 import { SKILLS } from "@/constant";
 import { isDeveloper } from "@/lib/utils";
+import { Careers } from "@/types";
 import {
   Accordion,
   AccordionContent,
@@ -23,7 +23,8 @@ const Skills = ({ career }: { career: Careers }) => {
       <Accordion
         orientation="vertical"
         className={`flex flex-col items-center gap-4 pt-4 *:text-white ${
-          isDeveloper(career) ? "invert" : ""}`}
+          isDeveloper(career) ? "invert" : ""
+        }`}
         type="single"
         collapsible
       >
@@ -48,7 +49,7 @@ const Skills = ({ career }: { career: Careers }) => {
               {skill.skills.map((skill) => (
                 <Button
                   key={skill}
-                  className="cursor-pointer text-balance h-auto rounded-lg bg-white/80 text-center text-black hover:bg-white/90 "
+                  className="h-auto cursor-pointer text-balance rounded-lg bg-white/80 text-center text-black hover:bg-white/90"
                 >
                   {skill}
                 </Button>

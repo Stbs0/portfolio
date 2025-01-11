@@ -5,15 +5,18 @@ import Footer from "@/components/Footer";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import { ABOUT_ME, SEO_KEYWORDS } from "@/constant";
+import { Careers } from "@/types";
 import { Metadata } from "next";
-
-export type Careers = "developer" | "pharmacist";
+import { notFound } from "next/navigation";
 
 export async function generateMetadata({
   params: { career },
 }: {
   params: { career: Careers };
 }): Promise<Metadata> {
+  if (career !== "developer" && career !== "pharmacist") {
+    return notFound();
+  }
   return {
     title: career,
     description: ABOUT_ME[career].join(" "),
@@ -24,17 +27,23 @@ export async function generateMetadata({
         : `http://localhost:3000/icon/icon-${career}.svg`,
   };
 }
-
+export async function generateStaticParams() {
+  return ["developer", "pharmacist"].map((career) => ({
+    career,
+  }));
+}
 
 export default function Career({ params }: { params: { career: Careers } }) {
   const career = params?.career;
 
-  console.log(career);
+  if (career !== "developer" && career !== "pharmacist") {
+    return notFound();
+  }
   return (
     <>
       <Banner career={career} />
       <About career={career} />
-      <Skills  career={career} />
+      <Skills career={career} />
       {career === "pharmacist" ? <Experience career={career} /> : <Projects />}
       <Footer career={career} />
     </>

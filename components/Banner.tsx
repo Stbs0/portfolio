@@ -1,7 +1,7 @@
-import { Careers } from "@/app/[career]/page";
 import { BANNER } from "@/constant";
 
 import { isDeveloper } from "@/lib/utils";
+import { Careers } from "@/types";
 import { MapPin } from "lucide-react";
 import PageSwitcher from "./CareerSwitcher";
 import ContactMeBtn from "./ContactMeBtn";

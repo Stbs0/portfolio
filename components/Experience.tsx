@@ -1,6 +1,6 @@
-import { type Careers } from "@/app/[career]/page";
 import { EXPERIENCES } from "@/constant";
 import { isDeveloper } from "@/lib/utils";
+import { Careers } from "@/types";
 
 const Job = ({
   job,
@@ -25,7 +25,7 @@ const Job = ({
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={img}
-         
+
           className="size-16 "
           alt={"Mohammed Mahmoud - Pharmacy Inter"}
         />
