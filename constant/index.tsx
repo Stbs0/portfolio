@@ -39,7 +39,7 @@ export const ABOUT_ME = {
     "Highly disciplined and enthusiastic individual with a wealth of diverse experiences. Meticulous and precise in every assigned task. Thrives under pressure and remains committed and responsible in crisis situations or high-stress environments. Strong interpersonal skills enable effective relationship building and communication. Fast learner with knowledge in dispensing protocols, inventory management, and regulatory restrictions. Fluent in Arabic and excellent in English, possessing strong language skills for effective communication with diverse individuals.",
   ],
 };
-
+export const CAREERS = ["developer", "pharmacist"];
 export const PROJECTS = [
   {
     title: "Sudan Codex",

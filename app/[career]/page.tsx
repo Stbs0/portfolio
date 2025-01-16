@@ -4,7 +4,7 @@ import Projects from "@/components/developer/Projects";
 import Footer from "@/components/Footer";
 import Experience from "@/components/pharmacist/Experience";
 import Skills from "@/components/Skills";
-import { ABOUT_ME, SEO_KEYWORDS } from "@/constant";
+import { ABOUT_ME, CAREERS, SEO_KEYWORDS } from "@/constant";
 import { Careers } from "@/types";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -14,21 +14,23 @@ export async function generateMetadata({
 }: {
   params: { career: Careers };
 }): Promise<Metadata> {
-  if (career !== "developer" && career !== "pharmacist") {
-    return notFound();
-  }
-  return {
-    title: career,
-    description: ABOUT_ME[career].join(" "),
-    keywords: SEO_KEYWORDS[career],
-    icons:
-      process.env.NODE_ENV === "production"
-        ? `/icon-${career}.svg`
-        : `http://localhost:3000/icon/icon-${career}.svg`,
-  };
+  return CAREERS.includes(career)
+    ? {
+        title: career,
+        description: ABOUT_ME[career].join(" "),
+        keywords: SEO_KEYWORDS[career],
+        icons:
+          process.env.NODE_ENV === "production"
+            ? `/icon-${career}.svg`
+            : `http://localhost:3000/icon/icon-${career}.svg`,
+      }
+    : {
+        title: "Page Not Found",
+        description: "The page you are looking for does not exist.",
+      };
 }
 export async function generateStaticParams() {
-  return ["developer", "pharmacist"].map((career) => ({
+  return CAREERS.map((career) => ({
     career,
   }));
 }
