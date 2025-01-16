@@ -1,8 +1,8 @@
 import About from "@/components/About";
 import Banner from "@/components/Banner";
-import Experience from "@/components/Experience";
+import Projects from "@/components/developer/Projects";
 import Footer from "@/components/Footer";
-import Projects from "@/components/Projects";
+import Experience from "@/components/pharmacist/Experience";
 import Skills from "@/components/Skills";
 import { ABOUT_ME, SEO_KEYWORDS } from "@/constant";
 import { Careers } from "@/types";
