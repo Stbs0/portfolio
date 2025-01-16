@@ -7,8 +7,8 @@ import PageSwitcher from "./CareerSwitcher";
 import ContactMeBtn from "./ContactMeBtn";
 const Banner = ({ career }: { career: Careers }) => {
   return (
-    <section className="mt-[100px] flex flex-row items-center justify-center px-20">
-      <div className="flex flex-col justify-center text-center">
+    <section className="mt-[100px]  container mx-auto flex flex-col items-center justify-center">
+
         <div className="flex justify-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -34,7 +34,7 @@ const Banner = ({ career }: { career: Careers }) => {
 
         <PageSwitcher career={career} />
         <p
-          className={`text-md my-5 max-w-[600px] ${
+          className={`text-md my-5 max-w-[600px] text-center ${
             isDeveloper(career) ? "text-gray-200" : "text-gray-800"
           } `}
         >
@@ -43,7 +43,7 @@ const Banner = ({ career }: { career: Careers }) => {
         <div className="text-md flex justify-center">
           <ContactMeBtn career={career} />
         </div>
-      </div>
+
     </section>
   );
 };

@@ -7,10 +7,10 @@ const About = ({ career }: { career: Careers }) => {
   return (
     <section
       id="about"
-      className="relative flex h-full flex-col items-center justify-center overflow-hidden pt-[35px]"
-      style={{ transform: "scale(0.9)" }}
+      className=" container mx-auto relative flex  flex-col items-center justify-center  "
+
     >
-      <div className="flex max-w-[900px] flex-col flex-wrap items-center justify-around">
+
         <h1
           className={`${
             isDeveloper(career) ? "text-white" : ""
@@ -19,7 +19,7 @@ const About = ({ career }: { career: Careers }) => {
           ABOUT ME
         </h1>
 
-        <div className="space-y-4 pt-4 text-center">
+        <div className="pt-4 text-balance text-center">
           {ABOUT_ME[career].map((paragraph, index) => (
             <p
               className={`text-balance ${
@@ -31,7 +31,7 @@ const About = ({ career }: { career: Careers }) => {
             </p>
           ))}
         </div>
-      </div>
+
     </section>
   );
 };
