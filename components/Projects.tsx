@@ -39,9 +39,9 @@ const Project = ({
 const Projects = () => {
   return (
     <section id="projects">
-      <h2 className="pt-[35px] text-center text-6xl font-semibold text-white">
+      <h1 className="pt-[35px] text-center big-texts font-semibold text-white">
         PROJECTS
-      </h2>
+      </h1>
       <p className="text-1xl bg-gradient-to-r from-purple-700 to-orange-500 bg-clip-text pb-5 text-center font-light tracking-[0.5em] text-transparent">
         EXPLORE NOW
       </p>

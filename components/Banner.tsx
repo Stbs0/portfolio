@@ -21,7 +21,7 @@ const Banner = ({ career }: { career: Careers }) => {
         <h1
           className={` ${
             isDeveloper(career) ? "text-white" : ""
-          } mt-10 max-w-[600px] animate-bounce cursor-pointer text-7xl font-semibold tracking-tighter`}
+          } big-texts mt-10 animate-bounce cursor-pointer font-semibold tracking-tighter`}
         >
           Mohammed Mahmoud
         </h1>

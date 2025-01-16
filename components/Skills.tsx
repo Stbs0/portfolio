@@ -15,7 +15,7 @@ const Skills = ({ career }: { career: Careers }) => {
       <h1
         className={`${
           isDeveloper(career) ? "text-white" : ""
-        } text-center text-6xl font-semibold`}
+        } big-texts text-center font-semibold`}
       >
         {isDeveloper(career) ? "TECH STACK" : "COMPETENCIES"}
       </h1>

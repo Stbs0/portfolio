@@ -14,7 +14,7 @@ const About = ({ career }: { career: Careers }) => {
         <h1
           className={`${
             isDeveloper(career) ? "text-white" : ""
-          } text-6xl font-semibold`}
+          }  font-semibold big-texts`}
         >
           ABOUT ME
         </h1>

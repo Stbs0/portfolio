@@ -55,7 +55,7 @@ const Experience = ({ career }: { career: Careers }) => {
       <h2
         className={`${
           isDeveloper(career) ? "text-white" : ""
-        } pt-[35px] text-center text-6xl font-semibold`}
+        } pt-[35px] text-center big-texts font-semibold `}
       >
         EXPERIENCE
       </h2>
