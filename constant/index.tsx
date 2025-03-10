@@ -1,4 +1,11 @@
-import { Database, Globe, Layers, Pill, ShieldPlus, Wrench } from "lucide-react";
+import {
+  Database,
+  Globe,
+  Layers,
+  Pill,
+  ShieldPlus,
+  Wrench,
+} from "lucide-react";
 
 export const Social_Icons = [
   {
@@ -160,6 +167,23 @@ export const SKILLS = {
 
 export const EXPERIENCES = [
   {
+    job: "Pharmacist",
+    company: "Alfadela Pharmacy",
+    location: "Jeddah, Saudi Arabia",
+    startDate: "Jan. 2025",
+    endDate: "Present",
+    responsibility: [
+      "Collaborated with clinic doctors to optimize medication selection and improve patient treatment plans",
+      "Coordinated with the insurance department to ensure efficient medication use and streamline approval processes",
+      "Managed medication procurement by ordering supplies from warehouses to maintain optimal stock levels",
+      "Communicated effectively with clinic doctors to improve medication choices",
+      "Worked closely with the insurance department to optimize medication use",
+      "Ordered medications from warehouses to ensure timely availability",
+      "Provided consultation on dosage, storage, side effects, and drug interactions to ensure customers are appropriately informed and educated",
+    ],
+    img: "/experiences/alfadelaPharmacy.jpg",
+  },
+  {
     job: "Pharmacy Intern",
     company: "Dr. Soliman Fakeeh Hospital",
     location: "Jeddah, Saudi Arabia",
@@ -228,3 +252,12 @@ export const SEO_KEYWORDS = {
     "patient outcomes",
   ],
 };
+
+export const REFERENCES = [
+  {
+    name: "Dr. Hani Karrar",
+    title: "Clinical Pharmacist",
+    company: "Dr. Samir Abbas Hospital",
+    location: "Jeddah, Saudi Arabia",
+  },
+];
