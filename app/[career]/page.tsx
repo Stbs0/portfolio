@@ -3,6 +3,7 @@ import Banner from "@/components/Banner";
 import Projects from "@/components/developer/Projects";
 import Footer from "@/components/Footer";
 import Experience from "@/components/pharmacist/Experience";
+import References from "@/components/pharmacist/References";
 import Skills from "@/components/Skills";
 import { ABOUT_ME, CAREERS, SEO_KEYWORDS } from "@/constant";
 import { Careers } from "@/types";
@@ -47,6 +48,7 @@ export default function Career({ params }: { params: { career: Careers } }) {
       <About career={career} />
       <Skills career={career} />
       {career === "pharmacist" ? <Experience career={career} /> : <Projects />}
+      {career === "pharmacist" ? <References/> : null}
       <Footer career={career} />
     </>
   );
