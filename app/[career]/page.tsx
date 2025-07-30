@@ -10,11 +10,17 @@ import { Careers } from "@/types";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-export async function generateMetadata({
-  params: { career },
-}: {
-  params: { career: Careers };
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ career: Careers }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
+
+  const {
+    career
+  } = params;
+
   return CAREERS.includes(career)
     ? {
         title: career,
@@ -36,7 +42,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function Career({ params }: { params: { career: Careers } }) {
+export default async function Career(props: { params: Promise<{ career: Careers }> }) {
+  const params = await props.params;
   const career = params?.career;
 
   if (career !== "developer" && career !== "pharmacist") {

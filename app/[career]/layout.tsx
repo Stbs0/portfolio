@@ -3,13 +3,18 @@ import { isDeveloper } from "@/lib/utils";
 import { notFound } from "next/navigation";
 import React from "react";
 
-const layout = ({
-  children,
-  params,
-}: {
-  children: React.ReactNode;
-  params: { career: string };
-}) => {
+const layout = async (
+  props: {
+    children: React.ReactNode;
+    params: Promise<{ career: string }>;
+  }
+) => {
+  const params = await props.params;
+
+  const {
+    children
+  } = props;
+
   const { career } = params;
   const validCareers = ["developer", "pharmacist"];
 

@@ -4,8 +4,7 @@ import { isDeveloper } from "@/lib/utils";
 import { PointMaterial, Points } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useMemo, useRef } from "react";
-// @ts-expect-error I don't care
-import * as random from "maath/random/dist/maath-random.esm";
+import * as random from "maath/random";
 import { useParams } from "next/navigation";
 
 const StarBackground = () => {
