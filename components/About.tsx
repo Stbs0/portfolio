@@ -3,7 +3,6 @@ import { isDeveloper } from "@/lib/utils";
 import { Careers } from "@/types";
 
 const About = ({ career }: { career: Careers }) => {
-  console.log(career);
   return (
     <section
       id="about"

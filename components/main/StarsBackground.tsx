@@ -3,49 +3,37 @@
 import { isDeveloper } from "@/lib/utils";
 import { PointMaterial, Points } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useMemo, useRef } from "react";
-import * as random from "maath/random";
+import { inSphere } from "maath/random";
 import { useParams } from "next/navigation";
-
+import { useRef, useState } from "react";
+import * as THREE from "three";
+const pointCount = 3333;
 const StarBackground = () => {
-  const ref = useRef(null);
-
-  const sphere = useMemo(() => {
-    return random.inSphere(new Float32Array(2500 * 3), { radius: 1.2 });
-  }, []);
+  const ref = useRef<THREE.Points>(null);
   const career = useParams().career;
+  const [sphere] = useState(
+    () =>
+      inSphere(new Float32Array(pointCount * 3), {
+        radius: 1.2,
+      }) as Float32Array,
+  );
 
   useFrame((state, delta) => {
-    if (ref.current) {
-      const time = state.clock.getElapsedTime();
+    if (!ref.current) return;
 
-      // Define base rotation speed
-      const baseXSpeed = 0.1;
-      const baseYSpeed = 0.07;
-
-      // Add slight directional drift
-      const driftX = Math.sin(time * 0.1) * 0.02; // Slowly changes over time
-      const driftY = Math.cos(time * 0.1) * 0.015;
-
-      //  @ts-expect-error I don't care
-      ref.current.rotation.x += (baseXSpeed + driftX) * delta;
-      //  @ts-expect-error I don't care
-
-      ref.current.rotation.y += (baseYSpeed + driftY) * delta;
-    }
+    ref.current.rotation.x -= delta / 10;
+    ref.current.rotation.y -= delta / 15;
   });
   return (
-    <group rotation={[4, 2, Math.PI / 4]}>
-      <Points ref={ref} positions={sphere} stride={3} frustumCulled>
-        <PointMaterial
-          transparent
-          color={career === "developer" ? "#fff" : "#000000"}
-          size={0.002}
-          sizeAttenuation={true}
-          dethWrite={false}
-        />
-      </Points>
-    </group>
+    <Points ref={ref} positions={sphere} stride={3}>
+      <PointMaterial
+        transparent
+        color={career === "developer" ? "#fff" : "#000000"}
+        size={0.003}
+        sizeAttenuation={true}
+        depthWrite={false}
+      />
+    </Points>
   );
 };
 
@@ -60,6 +48,7 @@ const StarsCanvas = () => {
     >
       <Canvas camera={{ position: [0, 0, 1] }}>
         <StarBackground />
+       
       </Canvas>
     </div>
   );
