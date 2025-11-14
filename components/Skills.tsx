@@ -12,13 +12,13 @@ import { Button } from "./ui/button";
 const Skills = ({ career }: { career: Careers }) => {
   return (
     <section id="skills" className="container mx-auto">
-      <h1
+      <h2
         className={`${
           isDeveloper(career) ? "text-white" : ""
         } big-texts text-center font-semibold`}
       >
         {isDeveloper(career) ? "TECH STACK" : "COMPETENCIES"}
-      </h1>
+      </h2>
 
       <Accordion
         orientation="vertical"
@@ -38,7 +38,7 @@ const Skills = ({ career }: { career: Careers }) => {
               <div className="flex items-center gap-4">
                 <skill.Icon className="h-10 w-10 rounded-large bg-white p-2 text-black" />
                 <div>
-                  <h2>{skill.name}</h2>
+                  <p>{skill.name}</p>
                   <p className="text-xs font-light text-gray-300/80">
                     {skill.description}
                   </p>
