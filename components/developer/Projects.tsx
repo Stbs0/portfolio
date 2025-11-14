@@ -42,7 +42,7 @@ const Projects = () => {
       <h1 className=" text-center big-texts font-semibold text-white">
         PROJECTS
       </h1>
-      <p className="text-1xl bg-gradient-to-r from-purple-700 to-orange-500 bg-clip-text pb-5 text-center font-light tracking-[0.5em] text-transparent">
+      <p className="text-1xl bg-linear-to-r from-purple-700 to-orange-500 bg-clip-text pb-5 text-center font-light tracking-[0.5em] text-transparent">
         EXPLORE NOW
       </p>
       <div className=" flex flex-col gap-5 justify-center">
