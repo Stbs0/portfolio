@@ -1,6 +1,5 @@
 @import 'tailwindcss';
 
-@source '../node_modules/@nextui-org/theme/dist/components/toggle.js';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -171,7 +170,7 @@
 .big-texts {
     @apply text-3xl sm:text-5xl md:text-7xl ;
   }
-  
+
 img,
 video {
   max-width: 100%;
