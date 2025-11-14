@@ -34,7 +34,7 @@ const Skills = ({ career }: { career: Careers }) => {
             key={skill.name}
             className="w-[300px] rounded-2xl bg-black/80 p-4 sm:w-[500px] lg:w-[600px]"
           >
-            <AccordionTrigger className="outline-none">
+            <AccordionTrigger className="outline-hidden">
               <div className="flex items-center gap-4">
                 <skill.Icon className="h-10 w-10 rounded-large bg-white p-2 text-black" />
                 <div>

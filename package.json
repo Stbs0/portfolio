@@ -6,13 +6,10 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "preinstall": "npx only-allow pnpm"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@next/third-parties": "15.4.5",
-    "@nextui-org/switch": "^2.2.6",
-    "@nextui-org/system": "^2.4.4",
+    "@next/third-parties": "16.0.3",
     "@nextui-org/theme": "^2.4.3",
     "@radix-ui/react-accordion": "^1.2.2",
     "@radix-ui/react-progress": "^1.1.1",
@@ -20,46 +17,43 @@
     "@radix-ui/react-switch": "^1.1.2",
     "@react-three/drei": "^10.6.1",
     "@react-three/fiber": "^9.3.0",
-    "@types/three": "^0.178.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.15.0",
     "lucide-react": "^0.469.0",
     "maath": "^0.10.8",
-    "next": "15.4.5",
-    "react": "19.1.1",
-    "react-dom": "19.1.1",
-    "sharp": "^0.33.0",
-    "tailwind-merge": "^2.5.5",
-    "tailwindcss-animate": "^1.0.7"
+    "next": "16.0.3",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "19.1.9",
-    "@types/react-dom": "19.1.7",
-    "@typescript-eslint/parser": "^8.18.1",
-    "autoprefixer": "^10.0.1",
-    "eslint": "^9.32.0",
-    "eslint-config-next": "15.4.5",
-    "eslint-plugin-react": "^7.37.2",
-    "eslint-plugin-react-hooks": "^5.1.0",
-    "globals": "^15.14.0",
+    "@types/three": "^0.178.1",
+    "@tailwindcss/postcss": "^4.1.17",
+    "@types/node": "^24.10.1",
+    "@types/react": "19.2.4",
+    "@types/react-dom": "19.2.3",
+    "@typescript-eslint/parser": "^8.46.4",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "16.0.3",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "globals": "^16.5.0",
     "postcss": "^8",
     "prettier": "^3.4.2",
-    "prettier-plugin-tailwindcss": "^0.6.9",
-    "react-intersection-observer": "^9.5.4",
-    "tailwindcss": "^3.3.0",
+    "prettier-plugin-tailwindcss": "^0.7.1",
+    "react-intersection-observer": "^10.0.0",
+    "tailwindcss": "^4.1.17",
     "three": "^0.159.0",
-    "typescript": "^5",
-    "typescript-eslint": "^8.18.1"
+    "typescript": "5.9.3",
+    "typescript-eslint": "^8.46.4"
   },
   "pnpm": {
-    "overrides": {
-      "@types/react": "19.1.9",
-      "@types/react-dom": "19.1.7"
-    },
     "onlyBuiltDependencies": [
       "sharp"
     ]
+  },
+  "overrides": {
+    "@types/react": "19.2.4",
+    "@types/react-dom": "19.2.3"
   }
 }

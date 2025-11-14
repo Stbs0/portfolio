@@ -1,10 +1,10 @@
 "use client";
 
 import { Careers } from "@/types";
-import { Switch } from "@nextui-org/switch";
 import { Binary, Pill } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { Switch } from "./ui/switch";
 
 export default function PageSwitcher({ career }: { career: Careers }) {
   const router = useRouter();
@@ -18,7 +18,6 @@ export default function PageSwitcher({ career }: { career: Careers }) {
   return (
     <div className="flex flex-col pt-4">
       <p className={`${isDeveloper ? "text-gray-300" : "text-gray-700"}`}>
-
         Click on the switch to view the other careers
       </p>
       <div className="flex items-center justify-center gap-4 rounded-md p-4 pt-1">
@@ -29,15 +28,19 @@ export default function PageSwitcher({ career }: { career: Careers }) {
         >
           Developer
         </span>
+        <Binary className={`${isDeveloper ? "invert" : ""}`} />
         <Switch
-          size="lg"
-          className=""
-          isSelected={isDeveloper}
-          endContent={<Pill />}
-          startContent={<Binary />}
-          onChange={(e) => handleToggle(e.target.checked)}
-          color="default"
+          checked={isDeveloper}
+          onCheckedChange={(e) => handleToggle(e)}
+          // size="lg"
+          // className=""
+          // isSelected={isDeveloper}
+          // endContent={<Pill />}
+          // startContent={<Binary />}
+          // onChange={(e) => handleToggle(e.target.checked)}
+          // color="default"
         />
+        <Pill className={`${isDeveloper ? "invert" : ""}`} />
         <span
           className={`${
             isDeveloper ? "text-gray-300" : "text-gray-700"
