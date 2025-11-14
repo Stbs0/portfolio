@@ -1,6 +1,7 @@
 import { EXPERIENCES } from "@/constant";
 import { isDeveloper } from "@/lib/utils";
 import { Careers } from "@/types";
+import Image from "next/image";
 
 const Job = ({
   job,
@@ -22,11 +23,12 @@ const Job = ({
   return (
     <div className="flex flex-col">
       <div className="flex gap-4 md:flex-row">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src={img}
-          className="size-16"
-          alt={"Mohammed Mahmoud - Pharmacy Inter"}
+          width={64}
+          height={64}
+          className="object-contain"
+          alt={job}
         />
         <div className="flex flex-col justify-center *:text-left">
           <p className={`text-black`}>

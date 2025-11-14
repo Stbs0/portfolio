@@ -23,7 +23,7 @@ const Footer = ({ career }: { career: string }) => {
                 height={40}
                 width={40}
                 alt={social.alt}
-                className="h-auto"
+               
               />
             </a>
           );
