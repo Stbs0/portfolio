@@ -79,7 +79,7 @@ export default async function Career(props: {
       <About career={career} />
       <Skills career={career} />
       {career === "pharmacist" ? <Experience career={career} /> : <Projects />}
-      {career === "pharmacist" ? <References /> : null}
+      {career === "pharmacist" && <References />}
       <Footer career={career} />
     </>
   );

@@ -28,11 +28,12 @@ const Banner = ({ career }: { career: Careers }) => {
         Mohammed Mahmoud
       </h1>
 
-      {/* <p
+      <p
         className={`flex items-center justify-center gap-2 font-semibold ${isDeveloper(career) ? "text-gray-200" : "text-gray-800"}`}
       >
         <MapPin /> <span>Jeddah, Saudi Arabia</span>
-      </p><p
+      </p>
+      <p
         className={`text-md my-5 max-w-[600px] text-center ${
           isDeveloper(career) ? "text-gray-200" : "text-gray-800"
         } `}
@@ -40,17 +41,17 @@ const Banner = ({ career }: { career: Careers }) => {
         {BANNER[career]}
       </p>
 
-      <PageSwitcher career={career} /> */}
-      {/* <p
+      <PageSwitcher career={career} />
+      <p
         className={`text-md my-5 max-w-[600px] text-center ${
           isDeveloper(career) ? "text-gray-200" : "text-gray-800"
         } `}
       >
         {BANNER[career]}
-      </p> */}
-      {/* <div className="text-md flex justify-center">
+      </p>
+      <div className="text-md flex justify-center">
         <ContactMeBtn career={career} />
-      </div> */}
+      </div>
     </section>
   );
 };

@@ -42,13 +42,14 @@ export const metadata: Metadata = {
     default: "Mohammed Mahmoud (stbs) - Developer & Pharmacist Portfolio",
     template: "%s | Mohammed Mahmoud (stbs)",
   },
-description:
+  description:
     "Explore the portfolio of Mohammed Mahmoud, a multi-talented professional transitioning from a successful career as a pharmacist to a passionate full-stack developer. Discover projects in React, Next.js, and TypeScript, and see how clinical precision translates into clean, efficient code.",
 
   // Open Graph (Facebook, LinkedIn, etc.)
   openGraph: {
     title: "Mohammed Mahmoud (stbs) - Developer & Pharmacist Portfolio",
-    description: "A portfolio showcasing expertise in web development and pharmacy.",
+    description:
+      "A portfolio showcasing expertise in web development and pharmacy.",
     url: "https://www.mohammedibrahimmahmoud.pro",
     siteName: "Mohammed Mahmoud Portfolio",
     images: [
@@ -67,7 +68,8 @@ description:
   twitter: {
     card: "summary_large_image",
     title: "Mohammed Mahmoud (stbs) - Developer & Pharmacist Portfolio",
-    description: "Explore the portfolio of a skilled full-stack developer and experienced pharmacist.",
+    description:
+      "Explore the portfolio of a skilled full-stack developer and experienced pharmacist.",
     creator: "@stbs66", // Your Twitter handle
     images: ["/others/openGraph.png"], // Must be an absolute URL
   },
@@ -76,9 +78,7 @@ description:
   alternates: {
     canonical: "/",
   },
-  other: {
-    "google-site-verification": "YOUR_GOOGLE_SITE_VERIFICATION_CODE", // Add your verification code
-  },
+
   robots: {
     index: true,
     follow: true,
@@ -109,7 +109,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <GoogleTagManager gtmId="GTM-TPPSZRGP" />
       <body
-        className={` ${poppings.variable} relative min-w-[400px]  bg-transparent`}
+        className={` ${poppings.variable} relative min-w-[400px] bg-transparent`}
       >
         <Layout>{children}</Layout>
       </body>
