@@ -14,7 +14,8 @@ const Banner = ({ career }: { career: Careers }) => {
           src="/me.webp"
           width={200}
           height={200}
-          className="h-52 w-52 rounded-full"
+          className="rounded-full"
+          priority
           alt="Mohammed Ibrahim Mahamoud"
         />
       </div>
