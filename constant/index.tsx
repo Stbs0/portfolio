@@ -227,7 +227,7 @@ export const EXPERIENCES = [
       "Counseled patients on medication usage, potential side effects, and drug interactions to promote safe and effective treatment outcomes",
       "Verified safety and accuracy of physician orders.",
     ],
-    img: "/experiences/ALfoaad.png",
+    img: "/experiences/ALfoaad.webp",
   },
 ];
 

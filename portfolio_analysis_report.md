@@ -7,7 +7,7 @@ My analysis is complete. Here is the final, prioritized list of actions to impro
 1. **Implement Next.js Image Optimization (Critical - Performance & Accessibility)**
     _**Problem:** You are using `<img>` tags for all images, including a 631KB PNG, which severely impacts load times. Alt text is also generic and not accessible.
     _ **Fix:** 1. In every component (`Projects.tsx`, `Experience.tsx`, etc.), replace the `<img>` tag with `<Image>` from `next/image`. 2. Provide `width` and `height` props based on the display size (e.g., `width={64} height={64}`). 3. Set the `alt` text dynamically using the item's data (e.g., `alt={project.title}` or `alt={experience.company}`).
-    - [ ] Fixed
+    - [x] Fixed
 2. **Fix the Sitemap (Critical - SEO)**
     _**Problem:** `app/sitemap.ts` is missing the root URL ("/") and may fail if the `NEXT_PUBLIC_BASE_URL` environment variable isn't set.
     _ **Fix:** Update `app/sitemap.ts` to include the root path.
