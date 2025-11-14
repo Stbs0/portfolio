@@ -6,8 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "preinstall": "npx only-allow pnpm"
+    "lint": "next lint"
+
   },
   "dependencies": {
     "@next/third-parties": "15.4.5",
@@ -54,12 +54,12 @@
     "typescript-eslint": "^8.18.1"
   },
   "pnpm": {
-    "overrides": {
-      "@types/react": "19.1.9",
-      "@types/react-dom": "19.1.7"
-    },
     "onlyBuiltDependencies": [
       "sharp"
     ]
+  },
+  "overrides": {
+    "@types/react": "19.1.9",
+    "@types/react-dom": "19.1.7"
   }
 }
