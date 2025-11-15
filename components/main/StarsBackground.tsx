@@ -51,7 +51,7 @@ const StarsCanvas = () => {
       {!loaded && <LoadingScreen isDev={isDev} />}
 
       <div
-        className={`fixed inset-0 z-[-1] h-full w-full ${
+        className={`fixed inset-0 z-[-1] h-screen w-full ${
           isDev ? "bg-black" : "bg-[#fdfdfd]"
         }`}
       >
