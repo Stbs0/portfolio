@@ -10,13 +10,13 @@ const About = ({ career }: { career: Careers }) => {
 
     >
 
-        <h1
+        <h2
           className={`${
             isDeveloper(career) ? "text-white" : ""
           }  font-semibold big-texts`}
         >
           ABOUT ME
-        </h1>
+        </h2>
 
         <div className="pt-4 text-balance text-center">
           {ABOUT_ME[career].map((paragraph, index) => (

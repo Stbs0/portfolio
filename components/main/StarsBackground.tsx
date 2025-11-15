@@ -48,7 +48,7 @@ const StarsCanvas = () => {
     >
       <Canvas camera={{ position: [0, 0, 1] }}>
         <StarBackground />
-       
+
       </Canvas>
     </div>
   );

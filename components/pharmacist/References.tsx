@@ -3,9 +3,9 @@ import { REFERENCES } from "@/constant";
 const References = () => {
   return (
     <section className="container mx-auto flex flex-col items-center justify-center gap-8 py-12">
-      <h1 className={`big-texts mb-6 text-3xl font-semibold text-gray-800`}>
+      <h2 className={`big-texts mb-6 text-3xl font-semibold text-gray-800`}>
         References
-      </h1>
+      </h2>
       <ol className="w-full space-y-8 px-4 md:px-8">
         {REFERENCES.map((reference) => (
           <li

@@ -38,9 +38,9 @@ const Project = ({
 const Projects = () => {
   return (
     <section id="projects" className="container mx-auto">
-      <h1 className="big-texts text-center font-semibold text-white">
+      <h2 className="big-texts text-center font-semibold text-white">
         PROJECTS
-      </h1>
+      </h2>
       <p className="text-1xl bg-linear-to-r from-purple-700 to-orange-500 bg-clip-text pb-5 text-center font-light tracking-[0.5em] text-transparent">
         EXPLORE NOW
       </p>
