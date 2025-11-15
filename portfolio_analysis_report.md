@@ -11,7 +11,7 @@ My analysis is complete. Here is the final, prioritized list of actions to impro
 2. **Fix the Sitemap (Critical - SEO)**
     _**Problem:** `app/sitemap.ts` is missing the root URL ("/") and may fail if the `NEXT_PUBLIC_BASE_URL` environment variable isn't set.
     _ **Fix:** Update `app/sitemap.ts` to include the root path.
-    - [ ] Fixed
+    - [x] Fixed
 3. **Re-evaluate the 3D Background (High - Performance)**
     _**Problem:** The `@react-three/fiber` animation in `StarsBackground.tsx` is resource-intensive, especially on mobile.
     _ **Fix:** Replace it with a lightweight alternative (e.g., a static image, CSS animation) or conditionally render it only on desktop devices.
@@ -19,15 +19,15 @@ My analysis is complete. Here is the final, prioritized list of actions to impro
 4. **Type All Constant Data (High - Maintainability)**
     _**Problem:** Your data in `constant/index.tsx` is not typed, risking runtime errors.
     _ **Fix:** Define types for `Project`, `Experience`, `Skill`, etc., in `types.ts` and apply them to the arrays and objects in your constants file.
-    - [ ] Fixed
+    - [x] Fixed
 5. **Adopt the Metadata API (Medium - SEO & Code Quality)**
     _**Problem:** You are manually managing `<head>` tags and a JSON-LD script in `app/layout.tsx`.
     _ **Fix:** Move all metadata, including OpenGraph and the JSON-LD schema, into an exported `metadata` object in your layouts and pages. This is the modern, recommended Next.js approach.
-    - [ ] Fixed
+    - [x] Fixed
 6. **Use Server Components by Default (Medium - Performance)**
     _**Problem:** Overusing `"use client"` increases the client-side JavaScript bundle.
     _ **Fix:** Audit your components. Remove `"use client"` from any component that does not use hooks (`useState`, `useEffect`) or browser-only APIs. Render them as Server Components to reduce the amount of JS sent to the browser.
-    - [ ] Fixed
+    - [x] Fixed
 7. **Fix Hidden Overflow Bug (Medium - Code Quality)**
 
     - **Problem:** The `overflow-x-hidden` style in your global CSS is likely hiding a layout issue.

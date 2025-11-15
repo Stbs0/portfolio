@@ -4,7 +4,7 @@ import "./globals.css";
 import { GoogleTagManager } from "@next/third-parties/google";
 import localFont from "next/font/local";
 
-import Layout from "@/components/Layout";
+import Head from "next/head";
 import { ReactNode } from "react";
 
 const poppings = localFont({
@@ -22,6 +22,7 @@ const poppings = localFont({
 });
 
 // Define JSON-LD schema for the Person
+
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -35,7 +36,6 @@ const personSchema = {
     "https://www.instagram.com/stbs0/?hl=en",
   ],
 };
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.mohammedibrahimmahmoud.pro"),
   title: {
@@ -96,22 +96,24 @@ export const metadata: Metadata = {
     statusBarStyle: "default",
     capable: true,
   },
-  // Add JSON-LD to the head
-  // The script tag will be automatically generated
-  // and added to the head of the document
-  // by Next.js
-  // @ts-ignore
-  "ld+json": personSchema,
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personSchema).replace(/</g, "\u003c"),
+          }}
+        />
+      </Head>
       <GoogleTagManager gtmId="GTM-TPPSZRGP" />
       <body
         className={` ${poppings.variable} relative min-w-[400px] bg-transparent`}
       >
-        <Layout>{children}</Layout>
+        {children}
       </body>
     </html>
   );

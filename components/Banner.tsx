@@ -4,7 +4,7 @@ import { isDeveloper } from "@/lib/utils";
 import { Careers } from "@/types";
 import { MapPin } from "lucide-react";
 import Image from "next/image";
-import PageSwitcher from "./CareerSwitcher";
+import PageSwitcher from "./PageSwitcher";
 import ContactMeBtn from "./ContactMeBtn";
 const Banner = ({ career }: { career: Careers }) => {
   return (

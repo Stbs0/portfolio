@@ -28,13 +28,13 @@ export const Social_Icons = [
     image: "/others/Twitter.svg",
     alt: "Mohammed Mahmoud - Social Media",
   },
-];
+] as const;
 export const BANNER = {
   developer:
     " Self-taught full-stack developer skilled in ReactJS, TypeScript, and Express, creating dynamic web solutions.",
   pharmacist:
     "A passionate pharmacist dedicated to helping patients find the right medication for their needs, ensuring optimal health outcomes.",
-};
+} as const;
 
 export const ABOUT_ME = {
   developer: [
@@ -45,16 +45,31 @@ export const ABOUT_ME = {
   pharmacist: [
     "Highly disciplined and enthusiastic individual with a wealth of diverse experiences. Meticulous and precise in every assigned task. Thrives under pressure and remains committed and responsible in crisis situations or high-stress environments. Strong interpersonal skills enable effective relationship building and communication. Fast learner with knowledge in dispensing protocols, inventory management, and regulatory restrictions. Fluent in Arabic and excellent in English, possessing strong language skills for effective communication with diverse individuals.",
   ],
-};
-export const CAREERS = ["developer", "pharmacist"];
+} as const;
+export const CAREERS = ["developer", "pharmacist"] as const;
 export const PROJECTS = [
   {
+    title: "Sudan Codex Mobile App",
+    url: "https://github.com/Stbs0/sudancodex-mobile",
+    image: "/projects/pLogo.png",
+    description:
+      "Developed a mobile app that provide FDA drug labeling information for heath care providers in Sudan, using ReactJS, vite, TypeScript and Tailwind CSS",
+  },
+  {
     title: "Sudan Codex",
-    url: "https://sudan-codex.web.app",
+    url: "https://sudancodex.app",
     image: "/projects/purpleLogo.png",
     description:
       "Developed a website that provide FDA drug labeling information for heath care providers in Sudan, using ReactJS, vite, TypeScript and Tailwind CSS",
   },
+  {
+    title: "Household Chore Tracker",
+    url: "https://lime-variable.vercel.app/",
+    image: "/projects/lime.png",
+    description:
+      "Turns everyday chores into a fun, rewarding experience. Designed for families, it helps parents assign tasks and rewards, while motivating children through points.",
+  },
+
   {
     title: "YC Directory",
     url: "https://yc-directory-stbs0s-projects.vercel.app",
@@ -90,6 +105,8 @@ export const SKILLS = {
         "Next.js",
         "Vite",
         "Tailwind CSS",
+        "React Native",
+        "Expo",
       ],
       Icon: Globe,
     },
@@ -99,7 +116,8 @@ export const SKILLS = {
       skills: [
         "Express",
         "MongoDB",
-        "MongoDB",
+        "Nestjs",
+        "RESTful Api",
         "Node.js",
         "PostgreSQL",
         "Prisma",
@@ -116,8 +134,9 @@ export const SKILLS = {
       skills: [
         "Git/GitHub",
         "Github Actions",
-
+        "Docker",
         "Playwright",
+        "Posthog",
         "Vitest",
         "Google Tag Manager",
         "Google Analytics",
@@ -163,7 +182,7 @@ export const SKILLS = {
       Icon: Layers,
     },
   ],
-};
+} as const;
 
 export const EXPERIENCES = [
   {
@@ -171,7 +190,7 @@ export const EXPERIENCES = [
     company: "Alfadela Pharmacy",
     location: "Jeddah, Saudi Arabia",
     startDate: "Jan. 2025",
-    endDate: "Present",
+    endDate: "Nov. 2025",
     responsibility: [
       "Collaborated with clinic doctors to optimize medication selection and improve patient treatment plans",
       "Coordinated with the insurance department to ensure efficient medication use and streamline approval processes",
@@ -229,7 +248,7 @@ export const EXPERIENCES = [
     ],
     img: "/experiences/ALfoaad.webp",
   },
-];
+] as const;
 
 export const SEO_KEYWORDS = {
   developer: [
@@ -251,7 +270,7 @@ export const SEO_KEYWORDS = {
     "drug therapy management",
     "patient outcomes",
   ],
-};
+} as const;
 
 export const REFERENCES = [
   {
@@ -260,4 +279,4 @@ export const REFERENCES = [
     company: "Dr. Samir Abbas Hospital",
     location: "Jeddah, Saudi Arabia",
   },
-];
+] as const;
