@@ -14,7 +14,7 @@ const Project = ({
 }) => {
   return (
     <a
-      className="flex h-full w-full"
+      className="flex  "
       href={url}
       rel="noopener noreferrer"
       target="_blank"
@@ -22,14 +22,14 @@ const Project = ({
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <Image
         src={image}
-        width={64}
-        height={64}
-        className="size-16 rounded-md bg-white/90 object-contain p-1"
+        width={128}
+        height={128}
+        className="rounded-md object-contain p-1 backdrop-blur-3xl"
         alt={title}
       />
-      <div className="p-3">
+      <div className="ml-4 flex flex-col gap-1">
         <p className="text-xl font-semibold text-white">{title}</p>
-        <p className="text-[10px] text-white/70">{description}</p>
+        <p className=" text-white/70">{description}</p>
       </div>
     </a>
   );
