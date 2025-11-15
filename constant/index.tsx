@@ -28,13 +28,13 @@ export const Social_Icons = [
     image: "/others/Twitter.svg",
     alt: "Mohammed Mahmoud - Social Media",
   },
-];
+] as const; ;
 export const BANNER = {
   developer:
     " Self-taught full-stack developer skilled in ReactJS, TypeScript, and Express, creating dynamic web solutions.",
   pharmacist:
     "A passionate pharmacist dedicated to helping patients find the right medication for their needs, ensuring optimal health outcomes.",
-};
+} as const;
 
 export const ABOUT_ME = {
   developer: [
@@ -45,8 +45,8 @@ export const ABOUT_ME = {
   pharmacist: [
     "Highly disciplined and enthusiastic individual with a wealth of diverse experiences. Meticulous and precise in every assigned task. Thrives under pressure and remains committed and responsible in crisis situations or high-stress environments. Strong interpersonal skills enable effective relationship building and communication. Fast learner with knowledge in dispensing protocols, inventory management, and regulatory restrictions. Fluent in Arabic and excellent in English, possessing strong language skills for effective communication with diverse individuals.",
   ],
-};
-export const CAREERS = ["developer", "pharmacist"];
+} as const ;
+export const CAREERS = ["developer", "pharmacist"] as const;
 export const PROJECTS = [
   {
     title: "Sudan Codex",
@@ -163,7 +163,7 @@ export const SKILLS = {
       Icon: Layers,
     },
   ],
-};
+} as const; ;
 
 export const EXPERIENCES = [
   {
@@ -229,7 +229,7 @@ export const EXPERIENCES = [
     ],
     img: "/experiences/ALfoaad.webp",
   },
-];
+] as const; ;
 
 export const SEO_KEYWORDS = {
   developer: [
@@ -251,7 +251,7 @@ export const SEO_KEYWORDS = {
     "drug therapy management",
     "patient outcomes",
   ],
-};
+} as const; ;
 
 export const REFERENCES = [
   {
@@ -260,4 +260,4 @@ export const REFERENCES = [
     company: "Dr. Samir Abbas Hospital",
     location: "Jeddah, Saudi Arabia",
   },
-];
+] as const; ;

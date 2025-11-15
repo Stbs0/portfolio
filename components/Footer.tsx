@@ -1,10 +1,11 @@
 import { Social_Icons } from "@/constant";
 import { isDeveloper } from "@/lib/utils";
+import { Careers } from "@/types";
 import Image from "next/image";
 
-const Footer = ({ career }: { career: string }) => {
+const Footer = ({ career }: { career: Careers }) => {
   return (
-    <div className="2xl container mx-auto pb-8 pt-[50px]">
+    <div className="2xl container mx-auto pt-[50px] pb-8">
       <div
         className={`${
           isDeveloper(career) ? "" : "invert"
@@ -23,7 +24,6 @@ const Footer = ({ career }: { career: string }) => {
                 height={40}
                 width={40}
                 alt={social.alt}
-               
               />
             </a>
           );

@@ -1,13 +1,11 @@
 "use client";
 
 import { isDeveloper } from "@/lib/utils";
+import { Careers } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
-import { useParams } from "next/navigation";
 
-const Navbar = () => {
-  const { career } = useParams();
-
+const Navbar = ({ career }: { career: Careers }) => {
   const subject = isDeveloper(career as string) ? "Developer" : "Pharmacist";
   const body = "I would like to get in touch with you.";
 

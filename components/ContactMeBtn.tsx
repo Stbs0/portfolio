@@ -1,7 +1,8 @@
 "use client";
 import { isDeveloper } from "@/lib/utils";
+import { Careers } from "@/types";
 
-const ContactMeBtn = ({ career }: { career: string }) => {
+const ContactMeBtn = ({ career }: { career: Careers }) => {
   return (
     <button
       onClick={() => window.open("mailto:mohammedjrt@gmail.com")}
@@ -16,7 +17,7 @@ const ContactMeBtn = ({ career }: { career: string }) => {
   );
 };
 
-export const ContactMeNav = ({ career }: { career: string }) => {
+export const ContactMeNav = ({ career }: { career: Careers }) => {
   return (
     <button
       onClick={() => window.open("mailto:mohammedjrt@gmail.com")}
