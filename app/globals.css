@@ -1,5 +1,4 @@
-@import 'tailwindcss';
-
+@import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -165,11 +164,25 @@
     @apply bg-background text-foreground;
   }
 
+  
+}
 
+.float {
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0) translateX(0);
+      opacity: 0.4;
+    }
+    50% {
+      transform: translateY(-20px) translateX(10px);
+      opacity: 0.2;
+    }
+  }
 }
 .big-texts {
-    @apply text-3xl sm:text-5xl md:text-7xl ;
-  }
+  @apply text-3xl sm:text-5xl md:text-7xl;
+}
 
 img,
 video {
