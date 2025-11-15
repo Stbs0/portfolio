@@ -1,9 +1,9 @@
-"use client";
 
 import { isDeveloper } from "@/lib/utils";
 import { Careers } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
+import { ContactMeNav } from "./ContactMeBtn";
 
 const Navbar = ({ career }: { career: Careers }) => {
   const subject = isDeveloper(career as string) ? "Developer" : "Pharmacist";
@@ -39,20 +39,7 @@ const Navbar = ({ career }: { career: Careers }) => {
             </button>
           </a>
         )}
-        <button
-          onClick={() =>
-            window.open(
-              `mailto:mohammedjrt@gmail.com?subject=${subject}&body=${body}`,
-            )
-          }
-          className={`ml-2 cursor-pointer rounded-xl bg-transparent p-2 px-5 focus:outline-hidden active:scale-95 ${
-            isDeveloper(career as string)
-              ? "text-white hover:bg-[#2E2E2E]"
-              : "hover:bg-[#2E2E2E] hover:text-white"
-          } `}
-        >
-          Contact
-        </button>
+       <ContactMeNav career={career} />
       </div>
     </header>
   );
