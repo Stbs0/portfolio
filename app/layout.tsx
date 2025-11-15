@@ -4,7 +4,6 @@ import "./globals.css";
 import { GoogleTagManager } from "@next/third-parties/google";
 import localFont from "next/font/local";
 
-import Layout from "@/components/Layout";
 import { ReactNode } from "react";
 
 const poppings = localFont({
@@ -111,7 +110,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body
         className={` ${poppings.variable} relative min-w-[400px] bg-transparent`}
       >
-        <Layout>{children}</Layout>
+        {children}
       </body>
     </html>
   );
